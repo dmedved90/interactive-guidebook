@@ -1,0 +1,27 @@
+# EZSJ instance (Predator): the app only, without Caddy.
+# HTTPS comes from the Cloudflare tunnel, which forwards guidebook.ezsj.eu to 127.0.0.1:9030
+# and sets X-Forwarded-Proto: https.
+#
+#   docker compose -f compose.ezsj.yaml up -d --build
+name: guidebook-ezsj
+
+services:
+  web:
+    build: .
+    container_name: guidebook-ezsj
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:9030:8000"
+    environment:
+      DJANGO_SECRET_KEY: ${DJANGO_SECRET_KEY:?set DJANGO_SECRET_KEY in .env}
+      DJANGO_ALLOWED_HOSTS: ${DOMAIN:?set DOMAIN in .env},localhost,127.0.0.1
+      DJANGO_HTTPS: "1"
+      CONTENT_REPO_URL: ${CONTENT_REPO_URL:-}
+      SOURCE_CODE_URL: ${SOURCE_CODE_URL-https://github.com/dmedved90/interactive-guidebook}
+      DJANGO_SUPERUSER_PASSWORD: ${DJANGO_SUPERUSER_PASSWORD:-}
+      DJANGO_SUPERUSER_EMAIL: ${DJANGO_SUPERUSER_EMAIL:-}
+    volumes:
+      - db:/data
+
+volumes:
+  db:

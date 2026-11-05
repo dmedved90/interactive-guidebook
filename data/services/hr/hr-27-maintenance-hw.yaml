@@ -10,6 +10,10 @@ result: |-
   Covering own consumption from the energy produced by the photovoltaic system; Maintenance of the photovoltaic system.
 remaining_hurdles: |-
   Inadequate maintenance of the photovoltaic system, inability to monitor the operation (efficiency) of the power plant
+duration: 'Ongoing'
+cost: '0.3% of the investment per year'
+cost_estimate: '200-600 EUR/year'
+provider: oss
 hr:
   name: HR-27-Održavanje - Oprema
   summary: |-
@@ -22,4 +26,7 @@ hr:
     Pokrivanje vlastite potrošnje energijom proizvedenom u fotonaponskom sustavu; održavanje fotonaponskog sustava.
   remaining_hurdles: |-
     Neodgovarajuće održavanje fotonaponskog sustava, nemogućnost praćenja rada (učinkovitosti) elektrane
+  duration: 'Kontinuirano'
+  cost: '0.3% vrijednosti investicije godišnje'
+  cost_estimate: '200-600 EUR/godišnje'
   reviewed: false

@@ -10,6 +10,10 @@ result: |-
   Proposal of a membership fee and/or other financing models: How much financing is available from community internal sources? How much from subsidies? How much from externally?
 remaining_hurdles: |-
   Due to administrative burden such as at least one employee, membership fee can be high.
+duration: '2-3 weeks'
+cost: 'Low'
+cost_estimate: '500-1,500 EUR'
+provider: oss
 hr:
   name: HR-15-Prethodna procjena - Financiranje
   summary: |-
@@ -22,4 +26,7 @@ hr:
     Prijedlog članarine i/ili drugih modela financiranja: koliko se sredstava može osigurati iz unutarnjih izvora zajednice? Koliko iz potpora? Koliko iz vanjskih izvora?
   remaining_hurdles: |-
     Zbog administrativnog opterećenja, primjerice barem jednog zaposlenika, članarina može biti visoka.
+  duration: '2-3 tjedna'
+  cost: 'Niska cijena'
+  cost_estimate: '500-1,500 EUR'
   reviewed: false

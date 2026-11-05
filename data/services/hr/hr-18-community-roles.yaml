@@ -7,6 +7,10 @@ description: |-
 input: Information from Core team members; Business and project management rules
 result: How to share workload and responsibilities; Promote positive community dynamics
 remaining_hurdles: Insufficient capabilities of the team members.
+duration: '1-2 weeks'
+cost: 'Low'
+cost_estimate: '< 500 EUR'
+provider: oss
 hr:
   name: HR-18-Uloge u zajednici
   summary: |-
@@ -16,4 +20,7 @@ hr:
   input: Informacije članova osnovnog tima; pravila poslovnog i projektnog upravljanja
   result: Kako podijeliti posao i odgovornosti; poticanje pozitivne dinamike u zajednici
   remaining_hurdles: Nedovoljne sposobnosti članova tima.
+  duration: '1-2 tjedna'
+  cost: 'Niska cijena'
+  cost_estimate: '< 500 EUR'
   reviewed: false

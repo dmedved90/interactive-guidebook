@@ -9,6 +9,10 @@ input: |-
 result: |-
   Understanding your daily/monthly/annual electricity demand; consumption profile and expected peaks
 remaining_hurdles: Unfavorable orientation of the building, shading or inadequate construction
+duration: '2-3 weeks'
+cost: 'Medium'
+cost_estimate: '1,000-3,000 EUR'
+provider: oss
 hr:
   name: HR-11-Analiza - Potrošnja
   summary: |-
@@ -20,4 +24,7 @@ hr:
   result: |-
     Razumijevanje dnevne/mjesečne/godišnje potrebe za električnom energijom; profil potrošnje i očekivani vrhovi
   remaining_hurdles: Nepovoljna orijentacija zgrade, zasjenjenje ili neodgovarajuća konstrukcija
+  duration: '2-3 tjedna'
+  cost: 'Srednja cijena'
+  cost_estimate: '1,000-3,000 EUR'
   reviewed: false

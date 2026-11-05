@@ -9,6 +9,10 @@ result: |-
   Report membership changes to the power grid operator; Register new participants of REC; Maintain and update member list
 remaining_hurdles: |-
   Lack of expertise and capacity among members to develop the sharing key; Lack of examples of good practice in Croatia
+duration: 'Ongoing'
+cost: 'Part of the administrative costs'
+cost_estimate: 'Included in the operating costs'
+provider: oss
 hr:
   name: HR-28-Članstvo - Administracija
   summary: |-
@@ -21,4 +25,7 @@ hr:
     Prijava promjena članstva operatoru mreže; registracija novih sudionika ZOE; vođenje i ažuriranje popisa članova
   remaining_hurdles: |-
     Nedostatak stručnosti i kapaciteta među članovima za izradu ključa raspodjele; nedostatak primjera dobre prakse u Hrvatskoj
+  duration: 'Kontinuirano'
+  cost: 'Dio administrativnih troškova'
+  cost_estimate: 'Uključeno u operativne troškove'
   reviewed: false

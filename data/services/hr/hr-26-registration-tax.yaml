@@ -7,6 +7,10 @@ description: |-
 web_link: https://saznaj-oib.porezna-uprava.hr/
 input: Statute of organization
 result: Tax number - OIB; Entry in the Register of Non-Profit Organizations
+duration: '1-2 weeks'
+cost: 'Minimal'
+cost_estimate: '< 100 EUR'
+provider: oss
 hr:
   name: HR-26-Registracija - Porez
   summary: |-
@@ -15,4 +19,7 @@ hr:
     U postupku registracije udruge porezna uprava dodjeljuje vam porezni broj - OIB. Nakon osnivanja udruge podnesite zahtjev za upis u Registar neprofitnih organizacija.
   input: Statut organizacije
   result: Porezni broj - OIB; upis u Registar neprofitnih organizacija
+  duration: '1-2 tjedna'
+  cost: 'Minimalni troškovi'
+  cost_estimate: '< 100 EUR'
   reviewed: false

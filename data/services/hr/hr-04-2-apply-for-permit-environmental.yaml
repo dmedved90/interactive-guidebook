@@ -10,6 +10,11 @@ result: |-
   A contractor has prepared Environmental Impact Assessment and submitted application for the Environmental Permit
 remaining_hurdles: |-
   This service is provided by external specialized companies and expensive. Process is time consuming.
+web_link: https://bioportal.hr/gis/
+duration: '6-12 weeks'
+cost: 'High'
+cost_estimate: '5,000-15,000 EUR'
+provider: external
 hr:
   name: HR-04-2-Zahtjev za dozvolu - Zaštita okoliša
   summary: |-
@@ -21,4 +26,7 @@ hr:
   result: |-
     Izvođač je izradio studiju utjecaja na okoliš i podnio zahtjev za okolišnu dozvolu
   remaining_hurdles: Uslugu pružaju vanjske specijalizirane tvrtke i skupa je. Postupak dugo traje.
+  duration: '6-12 tjedana'
+  cost: 'Visoka cijena'
+  cost_estimate: '5,000-15,000 EUR'
   reviewed: false

@@ -8,6 +8,10 @@ result: |-
   Keeping members updated; Recruiting new members; Organizing informational and social events; Offering assistance
 remaining_hurdles: |-
   Lack of new members. CEP membership is not attractive in Croatia due to administrative burden.
+duration: 'Ongoing'
+cost: 'Part of the administrative costs'
+cost_estimate: 'Included in the operating costs'
+provider: oss
 hr:
   name: HR-31-Članstvo - Uključenost
   summary: |-
@@ -18,4 +22,7 @@ hr:
     Redovito informiranje članova; privlačenje novih članova; organiziranje informativnih i društvenih događanja; pružanje pomoći
   remaining_hurdles: |-
     Nedostatak novih članova. Članstvo u energetskoj zajednici u Hrvatskoj nije privlačno zbog administrativnog opterećenja.
+  duration: 'Kontinuirano'
+  cost: 'Dio administrativnih troškova'
+  cost_estimate: 'Uključeno u operativne troškove'
   reviewed: false

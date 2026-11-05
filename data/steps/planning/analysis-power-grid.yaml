@@ -1,5 +1,6 @@
 title: Analysis - Power Grid
 sort_order: 135
+themes: [solar]
 topic: PV Plant
 description: Investigate the prerequisites for connecting your PV to the grid.
 objective: |-

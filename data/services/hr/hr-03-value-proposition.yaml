@@ -9,6 +9,10 @@ input: |-
 result: First draft of CEC (or REC) business development plan
 remaining_hurdles: |-
   Lack of professional capacities of REC or CEC members/shareholders for more complex technical or financial analysis.
+duration: '2-3 weeks'
+cost: 'Low to medium'
+cost_estimate: '500-2,000 EUR'
+provider: oss
 hr:
   name: HR-03-Vrijednosna ponuda
   summary: |-
@@ -20,4 +24,7 @@ hr:
   result: Prvi nacrt plana poslovnog razvoja ZGE (ili ZOE)
   remaining_hurdles: |-
     Nedostatak stručnih kapaciteta članova ZOE ili ZGE za složenije tehničke ili financijske analize.
+  duration: '2-3 tjedna'
+  cost: 'Niska do srednja cijena'
+  cost_estimate: '500-2,000 EUR'
   reviewed: false

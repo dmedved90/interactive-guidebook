@@ -9,6 +9,10 @@ result: |-
   Collecting energy data; Rate Application and Updates; Invoice Generation; Payment monitoring and processing
 remaining_hurdles: |-
   Lack of procedure for the management of the CEP by the DSO; Absence of a software tool that supports energy management
+duration: 'Ongoing (monthly)'
+cost: 'Part of the administrative costs'
+cost_estimate: 'Included in the operating costs'
+provider: oss
 hr:
   name: HR-29-Obračun
   summary: |-
@@ -20,4 +24,7 @@ hr:
     Prikupljanje energetskih podataka; primjena i ažuriranje tarifa; izrada računa; praćenje i obrada plaćanja
   remaining_hurdles: |-
     Nedostatak postupka ODS-a za upravljanje energetskom zajednicom; nepostojanje softverskog alata za upravljanje energijom
+  duration: 'Kontinuirano (mjesečno)'
+  cost: 'Dio administrativnih troškova'
+  cost_estimate: 'Uključeno u operativne troškove'
   reviewed: false

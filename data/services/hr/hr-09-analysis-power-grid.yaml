@@ -10,6 +10,10 @@ input: |-
 result: |-
   Special Conditions Verification obtained from HEP ODS; Offer for equipment for billing metering point from HEP ODS
 remaining_hurdles: Insufficient capacity of the DSO in certain periods
+duration: '4-8 weeks'
+cost: 'Medium'
+cost_estimate: '1,500-4,000 EUR'
+provider: external
 hr:
   name: HR-09-Analiza - Elektroenergetska mreža
   summary: |-
@@ -22,4 +26,7 @@ hr:
   result: |-
     Dobivena potvrda posebnih uvjeta od HEP ODS-a; ponuda HEP ODS-a za opremu obračunskog mjernog mjesta
   remaining_hurdles: Nedostatni kapaciteti ODS-a u određenim razdobljima
+  duration: '4-8 tjedana'
+  cost: 'Srednja cijena'
+  cost_estimate: '1,500-4,000 EUR'
   reviewed: false

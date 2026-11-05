@@ -11,6 +11,10 @@ result: |-
   PV plant operating permit; The plant is correctly installed, operates safely and meets all legal requirements.
 remaining_hurdles: |-
   Insufficient capabilities of HEP Elektra; the speed of finalization depends on the individual Elektra.
+duration: '4-8 weeks'
+cost: '1.5% of the total investment'
+cost_estimate: '1,000-3,000 EUR'
+provider: external
 hr:
   name: HR-23-Puštanje u pogon - Elektrana
   summary: |-
@@ -22,4 +26,7 @@ hr:
   result: |-
     Dozvola za rad fotonaponske elektrane; elektrana je pravilno ugrađena, radi sigurno i ispunjava sve zakonske zahtjeve.
   remaining_hurdles: Nedostatni kapaciteti HEP Elektre; brzina dovršetka ovisi o pojedinoj Elektri.
+  duration: '4-8 tjedana'
+  cost: '1.5% ukupne investicije'
+  cost_estimate: '1,000-3,000 EUR'
   reviewed: false

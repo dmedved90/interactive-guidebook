@@ -11,6 +11,10 @@ result: |-
   Considering the limitations, the architect can propose a design that meets the required conditions.
 remaining_hurdles: |-
   The process is expensive and time-consuming; in practice, the construction of PV plants on protected buildings is often not approved
+duration: '8-16 weeks'
+cost: 'High'
+cost_estimate: '3,000-10,000 EUR'
+provider: external
 hr:
   name: HR-05-2-Zahtjev za dozvolu - Propisi o prostornom uređenju
   summary: |-
@@ -23,4 +27,7 @@ hr:
     Uzimajući u obzir ograničenja, arhitekt može predložiti rješenje koje ispunjava propisane uvjete.
   remaining_hurdles: |-
     Postupak je skup i dugotrajan; u praksi se izgradnja fotonaponskih elektrana na zaštićenim zgradama često ne odobrava
+  duration: '8-16 tjedana'
+  cost: 'Visoka cijena'
+  cost_estimate: '3,000-10,000 EUR'
   reviewed: false

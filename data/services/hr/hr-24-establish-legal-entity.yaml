@@ -10,6 +10,10 @@ input: |-
 result: REC or CEC Established
 remaining_hurdles: |-
   Providing funds for additional costs associated with running a non-profit organization.
+duration: '4-8 weeks'
+cost: 'Low to medium'
+cost_estimate: '500-2,000 EUR'
+provider: oss
 hr:
   name: HR-24-Osnivanje pravne osobe
   summary: |-
@@ -19,4 +23,7 @@ hr:
   input: Popis osnivača (najmanje 3 člana); svrha i ciljevi udruge; djelatnosti, pravila
   result: Osnovana ZOE ili ZGE
   remaining_hurdles: Osiguravanje sredstava za dodatne troškove vođenja neprofitne organizacije.
+  duration: '4-8 tjedana'
+  cost: 'Niska do srednja cijena'
+  cost_estimate: '500-2,000 EUR'
   reviewed: false

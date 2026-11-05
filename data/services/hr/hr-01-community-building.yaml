@@ -10,6 +10,10 @@ result: |-
   Strong team of motivated people; Key members identified; Strong relationships nurtured
 remaining_hurdles: |-
   Distrust in the system of joint investment/sharing models; Lack of information; Lack of examples of good practice
+duration: '2-4 weeks'
+cost: 'Minimal'
+cost_estimate: '< 500 EUR'
+provider: oss
 hr:
   name: HR-01-Izgradnja zajednice
   summary: |-
@@ -21,4 +25,7 @@ hr:
   result: Snažan tim motiviranih ljudi; utvrđeni ključni članovi; njegovani čvrsti odnosi
   remaining_hurdles: |-
     Nepovjerenje u modele zajedničkog ulaganja i dijeljenja; nedostatak informacija; nedostatak primjera dobre prakse
+  duration: '2-4 tjedna'
+  cost: 'Minimalni troškovi'
+  cost_estimate: '< 500 EUR'
   reviewed: false

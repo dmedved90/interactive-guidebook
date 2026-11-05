@@ -10,6 +10,10 @@ input: |-
 result: New cabinets on the exterior of the house
 remaining_hurdles: |-
   Lack of capacity to install required Smart meters (ODS task), this task is expensive!
+duration: '4-8 weeks'
+cost: 'Medium'
+cost_estimate: '2,000-5,000 EUR'
+provider: external
 hr:
   name: HR-08-2-Analiza - Brojila i razdjelni ormari
   summary: |-
@@ -22,4 +26,7 @@ hr:
   result: Novi ormari na vanjskoj strani kuće
   remaining_hurdles: |-
     Nedostatni kapaciteti za ugradnju potrebnih pametnih brojila (zadaća ODS-a), a to je skupo!
+  duration: '4-8 tjedana'
+  cost: 'Srednja cijena'
+  cost_estimate: '2,000-5,000 EUR'
   reviewed: false

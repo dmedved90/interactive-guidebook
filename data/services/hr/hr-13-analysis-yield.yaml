@@ -10,6 +10,10 @@ result: |-
   Area in square meters available; how much PV does fit; solar radiation; efficiency of the panels; annual solar yield
 remaining_hurdles: |-
   Decision making is difficult due to insufficient energy literacy of a potential investor
+duration: '2-3 weeks'
+cost: 'Medium'
+cost_estimate: '1,500-3,500 EUR'
+provider: oss
 hr:
   name: HR-13-Analiza - Prinos
   summary: |-
@@ -21,4 +25,7 @@ hr:
     Raspoloživa površina u kvadratnim metrima; koliko fotonapona stane; sunčevo zračenje; učinkovitost panela; godišnji sunčani prinos
   remaining_hurdles: |-
     Odlučivanje je otežano zbog nedovoljne energetske pismenosti potencijalnog ulagača
+  duration: '2-3 tjedna'
+  cost: 'Srednja cijena'
+  cost_estimate: '1,500-3,500 EUR'
   reviewed: false

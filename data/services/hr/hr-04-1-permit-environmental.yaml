@@ -9,6 +9,10 @@ input: |-
   Exact location of future project; 10MW - less or more; Freestanding object - yes or no
 result: |-
   Information on the possibility of building a PV plant; Specialist's bid for preparation of assessment
+duration: '1-2 weeks'
+cost: 'Information costs only'
+cost_estimate: '< 500 EUR'
+provider: oss
 hr:
   name: HR-04-1-Dozvola - Zaštita okoliša
   summary: |-
@@ -19,4 +23,7 @@ hr:
     Točna lokacija budućeg projekta; 10 MW - manje ili više; samostojeći objekt - da ili ne
   result: |-
     Informacija o mogućnosti izgradnje fotonaponske elektrane; ponuda stručnjaka za izradu procjene
+  duration: '1-2 tjedna'
+  cost: 'Samo informativni troškovi'
+  cost_estimate: '< 500 EUR'
   reviewed: false

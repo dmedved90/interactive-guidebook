@@ -10,6 +10,10 @@ result: |-
   Main Project Approved; Project contains: components for PV plant (panels, inverter, battery); requirements for interconnections; requirements for location; technical documentation
 remaining_hurdles: |-
   The input from professionals and experts can become a bottleneck. They are high in demand, resulting in long lead times.
+duration: '6-12 weeks'
+cost: 'High'
+cost_estimate: '5,000-15,000 EUR'
+provider: external
 hr:
   name: HR-16-Analiza - Fotonaponski sustav - Dokumentacija i odobrenje - Glavni projekt
   summary: |-
@@ -21,4 +25,7 @@ hr:
   result: |-
     Odobren glavni projekt; projekt sadrži: komponente fotonaponske elektrane (paneli, izmjenjivač, baterija); zahtjeve za međusobna povezivanja; zahtjeve za lokaciju; tehničku dokumentaciju
   remaining_hurdles: Doprinos stručnjaka može postati usko grlo. Vrlo su traženi, pa su rokovi dugi.
+  duration: '6-12 tjedana'
+  cost: 'Visoka cijena'
+  cost_estimate: '5,000-15,000 EUR'
   reviewed: false

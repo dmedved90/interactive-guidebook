@@ -9,6 +9,10 @@ input: |-
 result: Apply for grants; Apply for state loans
 remaining_hurdles: |-
   Long delays and waiting list for Government grants. Complex administrative procedures.
+duration: '8-24 weeks'
+cost: 'Cost of preparing the documentation'
+cost_estimate: '1,000-3,000 EUR'
+provider: oss
 hr:
   name: HR-20-Financiranje - Javna sredstva
   summary: |-
@@ -19,4 +23,7 @@ hr:
   result: Prijava za bespovratna sredstva; prijava za državne kredite
   remaining_hurdles: |-
     Dugo čekanje i liste čekanja za državne potpore. Složeni administrativni postupci.
+  duration: '8-24 tjedna'
+  cost: 'Troškovi pripreme dokumentacije'
+  cost_estimate: '1,000-3,000 EUR'
   reviewed: false

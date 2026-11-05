@@ -9,6 +9,10 @@ input: |-
   Wiring Schemes of existing building from all owners; Data from all consumers/owners
 result: |-
   Electrical installation project for PV plant; Sufficiency of the power rating of existing wires
+duration: '2-3 weeks'
+cost: 'Medium'
+cost_estimate: '1,000-3,000 EUR'
+provider: external
 hr:
   name: HR-08-1-Analiza - Električne instalacije
   summary: |-
@@ -20,4 +24,7 @@ hr:
     Sheme instalacija postojeće zgrade od svih vlasnika; podaci svih potrošača/vlasnika
   result: |-
     Projekt električnih instalacija za fotonaponsku elektranu; dostatnost nazivne snage postojećih vodova
+  duration: '2-3 tjedna'
+  cost: 'Srednja cijena'
+  cost_estimate: '1,000-3,000 EUR'
   reviewed: false

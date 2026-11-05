@@ -9,6 +9,10 @@ input: |-
 result: |-
   Community goal defined; Determined community size, number of members and composition; The needs and motivations of members
 remaining_hurdles: Lack of practical examples on ways of organizing CEC or REC
+duration: '3-6 weeks'
+cost: 'Low'
+cost_estimate: '500-1,000 EUR'
+provider: oss
 hr:
   name: HR-02-Procjena zajednice
   summary: |-
@@ -20,4 +24,7 @@ hr:
   result: |-
     Definiran cilj zajednice; utvrđeni veličina zajednice, broj i sastav članova; potrebe i motivacija članova
   remaining_hurdles: Nedostatak praktičnih primjera organiziranja ZGE ili ZOE
+  duration: '3-6 tjedana'
+  cost: 'Niska cijena'
+  cost_estimate: '500-1,000 EUR'
   reviewed: false

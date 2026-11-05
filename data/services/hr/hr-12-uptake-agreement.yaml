@@ -11,6 +11,10 @@ input: |-
 result: Status as an electricity vendor; Differences between potential off-takers
 remaining_hurdles: |-
   From beginning of year 2026, HEP Elektra will stop compensating uptake. Selling electricity within an energy community will be only option.
+duration: '2-4 weeks'
+cost: 'Low'
+cost_estimate: '500-1,500 EUR'
+provider: external
 hr:
   name: HR-12-Ugovor o otkupu
   summary: |-
@@ -22,4 +26,7 @@ hr:
   result: Status prodavatelja električne energije; razlike između mogućih otkupljivača
   remaining_hurdles: |-
     Od početka 2026. HEP Elektra prestaje s otkupom. Prodaja električne energije unutar energetske zajednice bit će jedina mogućnost.
+  duration: '2-4 tjedna'
+  cost: 'Niska cijena'
+  cost_estimate: '500-1,500 EUR'
   reviewed: false

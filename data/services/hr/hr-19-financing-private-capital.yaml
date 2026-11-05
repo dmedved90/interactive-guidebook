@@ -7,6 +7,10 @@ input: |-
   Project value and proposed timeline for construction; Preferred method for financing
 result: Apply for a bank loan; Find investors; Crowdfunding
 remaining_hurdles: High cost of loans. Crowdfunding not developed.
+duration: '4-8 weeks'
+cost: 'Depends on the amount financed'
+cost_estimate: 'Interest and fees - variable'
+provider: oss
 hr:
   name: HR-19-Financiranje - Privatni kapital
   summary: |-
@@ -15,4 +19,7 @@ hr:
   input: Vrijednost projekta i predloženi rok izgradnje; željeni način financiranja
   result: Zahtjev za bankovni kredit; pronalazak ulagača; skupno financiranje
   remaining_hurdles: Visoki troškovi kredita. Skupno financiranje nije razvijeno.
+  duration: '4-8 tjedana'
+  cost: 'Ovisi o iznosu financiranja'
+  cost_estimate: 'Kamate i naknade - varijabilno'
   reviewed: false

@@ -8,6 +8,10 @@ input: |-
   Technical Documentation of roof; Overview of all applied fire protection measures by an authorized person
 result: |-
   Fire protection study; Additional measures for fire protection in building and on the roof
+duration: '3-6 weeks'
+cost: 'Medium to high'
+cost_estimate: '2,000-8,000 EUR'
+provider: external
 hr:
   name: HR-10-Analiza - Građevinske sinergije i zaštita od požara
   summary: |-
@@ -17,4 +21,7 @@ hr:
   input: |-
     Tehnička dokumentacija krova; prikaz svih primijenjenih mjera zaštite od požara koji izrađuje ovlaštena osoba
   result: Elaborat zaštite od požara; dodatne mjere zaštite od požara u zgradi i na krovu
+  duration: '3-6 tjedana'
+  cost: 'Srednja do visoka cijena'
+  cost_estimate: '2,000-8,000 EUR'
   reviewed: false

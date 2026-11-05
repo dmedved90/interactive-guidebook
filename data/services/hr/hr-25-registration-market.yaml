@@ -12,6 +12,10 @@ result: |-
   Licence for performing energy activity issued by Croatian Energy Regulatory Agency HERA
 remaining_hurdles: |-
   Significant administrative and financial burden for all potential energy communities
+duration: '8-12 weeks'
+cost: 'Medium'
+cost_estimate: '2,000-4,000 EUR (+ fee 995 EUR)'
+provider: oss
 hr:
   name: HR-25-Registracija - Tržište
   summary: |-
@@ -25,4 +29,7 @@ hr:
     Dozvola za obavljanje energetske djelatnosti koju izdaje Hrvatska energetska regulatorna agencija HERA
   remaining_hurdles: |-
     Znatno administrativno i financijsko opterećenje za sve potencijalne energetske zajednice
+  duration: '8-12 tjedana'
+  cost: 'Srednja cijena'
+  cost_estimate: '2,000-4,000 EUR (+ pristojba 995 EUR)'
   reviewed: false

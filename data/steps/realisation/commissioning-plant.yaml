@@ -1,5 +1,6 @@
 title: Commissioning - Plant
 sort_order: 250
+themes: [solar]
 topic: PV Plant
 description: Get the permission to start operation
 objective: |-

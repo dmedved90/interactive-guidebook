@@ -6,6 +6,10 @@ description: Find an insurance provider and sign a policy for your PV system.
 input: PV plant data
 result: |-
   Understand the risks and costs of insurance; Compare offers; Understand bundling options
+duration: '1-2 weeks'
+cost: '0.5% of the investment per year'
+cost_estimate: '300-1,000 EUR/year'
+provider: external
 hr:
   name: HR-17-Osiguranje
   summary: |-
@@ -14,4 +18,7 @@ hr:
   input: Podaci o fotonaponskoj elektrani
   result: |-
     Razumjeti rizike i troškove osiguranja; usporediti ponude; razumjeti mogućnosti paketnog osiguranja
+  duration: '1-2 tjedna'
+  cost: '0.5% vrijednosti investicije godišnje'
+  cost_estimate: '300-1,000 EUR/godišnje'
   reviewed: false

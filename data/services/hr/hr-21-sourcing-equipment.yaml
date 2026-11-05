@@ -7,6 +7,10 @@ description: |-
 stakeholder: Solvis d.o.o.
 input: List of requirements specification; Contracting process
 result: Comprehensive decision and contract with PV equipment supplier.
+duration: '4-8 weeks'
+cost: 'Depends on the system capacity'
+cost_estimate: '40,000-150,000 EUR (for a 30-100 kW system)'
+provider: oss
 hr:
   name: HR-21-Nabava - Oprema
   summary: Za uspješnu nabavu započnite jasnim definiranjem svojih zahtjeva.
@@ -15,4 +19,7 @@ hr:
   stakeholder: Solvis d.o.o.
   input: Specifikacija zahtjeva; postupak ugovaranja
   result: Konačna odluka i ugovor s dobavljačem fotonaponske opreme.
+  duration: '4-8 tjedana'
+  cost: 'Ovisi o kapacitetu sustava'
+  cost_estimate: '40,000-150,000 EUR (za 30-100 kW sustav)'
   reviewed: false

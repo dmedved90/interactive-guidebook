@@ -11,6 +11,10 @@ result: |-
   Information about legality of the existing facility and about ownership of land and building.
 remaining_hurdles: |-
   If everything is not in accordance with the law, all administrative and legal obstacles have to be removed before starting the project.
+duration: '1-2 weeks (if there are no issues)'
+cost: 'Low'
+cost_estimate: '200-500 EUR'
+provider: oss
 hr:
   name: HR-07-Dozvola - Građevinski propisi
   summary: |-
@@ -23,4 +27,7 @@ hr:
     Informacija o legalnosti postojeće građevine i o vlasništvu nad zemljištem i zgradom.
   remaining_hurdles: |-
     Ako nije sve u skladu sa zakonom, prije početka projekta treba otkloniti sve upravne i pravne prepreke.
+  duration: '1-2 tjedna (ako nema problema)'
+  cost: 'Niska cijena'
+  cost_estimate: '200-500 EUR'
   reviewed: false

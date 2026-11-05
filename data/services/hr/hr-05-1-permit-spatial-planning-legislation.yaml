@@ -8,6 +8,10 @@ web_link: https://geoportal.kulturnadobra.hr/geoportal.html#/
 input: Exact location of future project; List of authorized architects
 result: |-
   Information on the possibility of building a PV plant in relation to regulations on the protection of cultural heritage
+duration: '1-2 weeks'
+cost: 'Information costs only'
+cost_estimate: '< 500 EUR'
+provider: oss
 hr:
   name: HR-05-1-Dozvola - Propisi o prostornom uređenju
   summary: |-
@@ -17,4 +21,7 @@ hr:
   input: Točna lokacija budućeg projekta; popis ovlaštenih arhitekata
   result: |-
     Informacija o mogućnosti izgradnje fotonaponske elektrane s obzirom na propise o zaštiti kulturne baštine
+  duration: '1-2 tjedna'
+  cost: 'Samo informativni troškovi'
+  cost_estimate: '< 500 EUR'
   reviewed: false

@@ -4,12 +4,16 @@ summary: |-
   To effectively realize your project, start by clearly communicating its characteristics to potential professionals.
 description: |-
   Certified installers are registered and published on the official website of the MPGI.
-web_link: https://einstalaterioie.mpgi.hr/api/reports/instalateri/
+web_link: https://einstalaterioie.mpgi.hr/api/reports/instalateri/izvadakIzRegistraCertificiranihInstalatera
 stakeholder: 3tCable d.o.o.
 input: |-
   List of certified installers for PV plants; Communicate project characteristics; Find professionals; Compare prices
 result: |-
   Execution of works on the photovoltaic system by certified installers; Execution of works on the existing connection; Professional supervision
+duration: '2-4 weeks'
+cost: 'Included in the equipment and installation price'
+cost_estimate: 'Part of the total investment'
+provider: oss
 hr:
   name: HR-22-Nabava - Stručnjaci
   summary: |-
@@ -21,4 +25,7 @@ hr:
     Popis ovlaštenih instalatera fotonaponskih elektrana; predstavljanje značajki projekta; pronalazak stručnjaka; usporedba cijena
   result: |-
     Izvođenje radova na fotonaponskom sustavu od strane ovlaštenih instalatera; izvođenje radova na postojećem priključku; stručni nadzor
+  duration: '2-4 tjedna'
+  cost: 'Uključeno u cijenu opreme i instalacije'
+  cost_estimate: 'Dio ukupne investicije'
   reviewed: false

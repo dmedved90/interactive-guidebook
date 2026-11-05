@@ -11,6 +11,10 @@ result: |-
   Load-bearing Capacity on the roof in kg/m2; Opinion of Certified Civil Engineer about additional load of PV plant
 remaining_hurdles: |-
   Insufficient available area for the construction of a photovoltaic system with sufficient capacity
+duration: '2-4 weeks'
+cost: 'Medium'
+cost_estimate: '1,500-4,000 EUR'
+provider: external
 hr:
   name: HR-06-Analiza - Statika
   summary: |-
@@ -23,4 +27,7 @@ hr:
     Nosivost krova u kg/m²; mišljenje ovlaštenog inženjera građevinarstva o dodatnom opterećenju od fotonaponske elektrane
   remaining_hurdles: |-
     Nedovoljna raspoloživa površina za izgradnju fotonaponskog sustava dovoljne snage
+  duration: '2-4 tjedna'
+  cost: 'Srednja cijena'
+  cost_estimate: '1,500-4,000 EUR'
   reviewed: false

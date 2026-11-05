@@ -24,7 +24,10 @@ from django.conf import settings
 from django.db import transaction
 from django.utils.text import slugify
 
-from .models import Country, GeneralStep, Phase, Service, ServicePhase, ServiceTranslation, StepTranslation
+from .models import (
+    PROVIDER_CHOICES, THEMES, Country, GeneralStep, Phase, Service, ServicePhase, ServiceTranslation,
+    StepTranslation,
+)
 
 CONTENT_DIR = Path(settings.BASE_DIR) / 'data'
 
@@ -41,6 +44,7 @@ STEP_FIELDS = {
     'description': ('description', False, None),
     'objective': ('objective', False, None),
     'description_long': ('description_long', False, None),
+    'themes': (None, False, None),
 }
 SERVICE_FIELDS = {
     'name': ('name', True, 200),
@@ -52,6 +56,10 @@ SERVICE_FIELDS = {
     'input': ('service_input', False, None),
     'result': ('result', False, None),
     'remaining_hurdles': ('remaining_hurdles', False, None),
+    'duration': ('duration', False, 100),
+    'cost': ('cost', False, 200),
+    'cost_estimate': ('cost_estimate', False, 200),
+    'provider': ('provider', False, None),
     'extra_phases': (None, False, None),
     'active': ('is_active', False, None),
 }
@@ -70,9 +78,13 @@ SERVICE_TRANSLATION_FIELDS = {
     'input': ('service_input', False, None),
     'result': ('result', False, None),
     'remaining_hurdles': ('remaining_hurdles', False, None),
+    'duration': ('duration', False, 100),
+    'cost': ('cost', False, 200),
+    'cost_estimate': ('cost_estimate', False, 200),
     'reviewed': ('reviewed', False, None),
 }
 BOOLEAN_FIELDS = {'active', 'reviewed'}
+LIST_FIELDS = {'extra_phases', 'themes'}   # checked by the caller
 
 
 def translation_languages():
@@ -160,8 +172,8 @@ def _check_fields(data, spec, rel, errors):
             if not isinstance(value, bool):
                 errors.append(f'{rel}: "{name}" must be true or false')
                 continue
-        elif name == 'extra_phases':
-            continue  # checked by the caller
+        elif name in LIST_FIELDS:
+            continue
         else:
             if not isinstance(value, (str, int, float)):
                 errors.append(f'{rel}: "{name}" must be text')
@@ -239,6 +251,11 @@ def load_content(base=CONTENT_DIR):
         )
         values = _check_fields(data, STEP_FIELDS, rel, errors)
         if values is not None:
+            themes = data.get('themes') or []
+            if not isinstance(themes, list) or any(t not in THEMES for t in themes):
+                errors.append(f'{rel}: "themes" must be a list of: {", ".join(THEMES)}')
+                themes = []
+            values['themes'] = ','.join(themes)
             content.steps[key] = StepData(
                 key=key, phase=phase, path=rel, values=values, translations=translations,
             )
@@ -262,6 +279,9 @@ def load_content(base=CONTENT_DIR):
         step = str(data.get('step') or '')
         if step and step not in content.steps:
             errors.append(f'{rel}: step "{step}" does not exist in data/steps/')
+        provider = values.get('provider', '')
+        if provider and provider not in dict(PROVIDER_CHOICES):
+            errors.append(f'{rel}: "provider" must be one of: {", ".join(dict(PROVIDER_CHOICES))}')
         link = values.get('web_link', '')
         if link and not URL_RE.match(link):
             errors.append(f'{rel}: "web_link" must start with https:// or http://')
@@ -338,7 +358,8 @@ STEP_TRANSLATION_DEFAULTS = {
 }
 SERVICE_TRANSLATION_DEFAULTS = {
     'name': '', 'summary': '', 'description': '', 'stakeholder': '', 'service_input': '',
-    'result': '', 'remaining_hurdles': '', 'reviewed': False,
+    'result': '', 'remaining_hurdles': '', 'duration': '', 'cost': '', 'cost_estimate': '',
+    'reviewed': False,
 }
 
 
@@ -374,6 +395,7 @@ def _sync(content, report):
     for key, data in content.steps.items():
         values = {**data.values, 'phase': phases[data.phase]}
         values.setdefault('topic', '')
+        values.setdefault('themes', '')
         for optional in ('description', 'objective', 'description_long'):
             values.setdefault(optional, '')
         step = existing_steps.get(key)
@@ -399,7 +421,8 @@ def _sync(content, report):
         step = steps[data.step]
         values = {
             'description': '', 'web_link': '', 'stakeholder': '', 'service_input': '',
-            'result': '', 'remaining_hurdles': '', 'is_active': True,
+            'result': '', 'remaining_hurdles': '', 'duration': '', 'cost': '', 'cost_estimate': '',
+            'provider': '', 'is_active': True,
             **data.values,
             'country': countries[data.country],
             'general_step': step,

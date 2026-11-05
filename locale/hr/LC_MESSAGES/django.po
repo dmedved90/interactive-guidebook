@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-01 21:20+0000\n"
+"POT-Creation-Date: 2026-11-05 17:18+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Draft translation - pending review by native speakers\n"
 "Language-Team: DISCOVER partners (hr)\n"
@@ -16,7 +16,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 
 #: accounts/admin.py:29
 msgid "Personal info"
@@ -104,8 +105,7 @@ msgstr "jezik"
 msgid ""
 "Interface language shown after signing in. Updated when the user switches "
 "language."
-msgstr ""
-"Jezik sučelja nakon prijave. Ažurira se kada korisnik promijeni jezik."
+msgstr "Jezik sučelja nakon prijave. Ažurira se kada korisnik promijeni jezik."
 
 #: accounts/models.py:71
 msgid "user"
@@ -197,11 +197,23 @@ msgstr "Upravljanje"
 msgid "countries"
 msgstr "države"
 
-#: catalog/models.py:132 catalog/models.py:153
+#: catalog/models.py:48
+msgid "Building a solar power plant"
+msgstr "Izgradnja solarne elektrane"
+
+#: catalog/models.py:53
+msgid "One-stop shop"
+msgstr "Centar za potporu (OSS)"
+
+#: catalog/models.py:54
+msgid "External provider"
+msgstr "Vanjski pružatelj"
+
+#: catalog/models.py:157 catalog/models.py:178
 msgid "translation"
 msgstr "prijevod"
 
-#: catalog/models.py:133 catalog/models.py:154
+#: catalog/models.py:158 catalog/models.py:179
 msgid "translations"
 msgstr "prijevodi"
 
@@ -240,19 +252,32 @@ msgid ""
 "<strong>Select your country</strong> to see only the services relevant to "
 "your pilot region."
 msgstr ""
-"<strong>Odaberite svoju državu</strong> kako biste vidjeli samo usluge važne"
-" za vašu pilot-regiju."
+"<strong>Odaberite svoju državu</strong> kako biste vidjeli samo usluge važne "
+"za vašu pilot-regiju."
 
 #: catalog/templates/catalog/guidebook.html:42
+msgid "Theme"
+msgstr "Tema"
+
+#: catalog/templates/catalog/guidebook.html:44
+msgid "All steps"
+msgstr "Svi koraci"
+
+#: catalog/templates/catalog/guidebook.html:49
 msgid "Show"
 msgstr "Prikaži"
 
-#: catalog/templates/catalog/guidebook.html:48
+#: catalog/templates/catalog/guidebook.html:55
 #, python-format
 msgid "Make %(country)s my default"
 msgstr "Postavi %(country)s kao zadanu"
 
-#: catalog/templates/catalog/guidebook.html:59 templates/home.html:98
+#: catalog/templates/catalog/guidebook.html:61
+#, python-format
+msgid "<strong>%(theme)s</strong>: showing %(shown)s of %(total)s steps."
+msgstr "<strong>%(theme)s</strong>: prikazano %(shown)s od %(total)s koraka."
+
+#: catalog/templates/catalog/guidebook.html:72 templates/home.html:98
 #: templates/home.html:121 templates/home.html:143
 #, python-format
 msgid "%(counter)s step"
@@ -261,7 +286,7 @@ msgstr[0] "%(counter)s korak"
 msgstr[1] "%(counter)s koraka"
 msgstr[2] "%(counter)s koraka"
 
-#: catalog/templates/catalog/guidebook.html:74
+#: catalog/templates/catalog/guidebook.html:87
 #: catalog/templates/catalog/service_list.html:63
 #, python-format
 msgid "%(counter)s service"
@@ -270,17 +295,27 @@ msgstr[0] "%(counter)s usluga"
 msgstr[1] "%(counter)s usluge"
 msgstr[2] "%(counter)s usluga"
 
-#: catalog/templates/catalog/guidebook.html:86
+#: catalog/templates/catalog/guidebook.html:100
+#: catalog/templates/catalog/service_detail.html:38
+msgid "Duration"
+msgstr "Trajanje"
+
+#: catalog/templates/catalog/guidebook.html:101
+#: catalog/templates/catalog/service_detail.html:46
+msgid "Cost estimate"
+msgstr "Procjena troška"
+
+#: catalog/templates/catalog/guidebook.html:106
 msgid "Details"
 msgstr "Detalji"
 
-#: catalog/templates/catalog/guidebook.html:88
+#: catalog/templates/catalog/guidebook.html:108
 #: catalog/templates/catalog/service_detail.html:26
 #: initiators/templates/initiators/service_link.html:40
 msgid "Official link"
 msgstr "Službena poveznica"
 
-#: catalog/templates/catalog/guidebook.html:100
+#: catalog/templates/catalog/guidebook.html:120
 msgid "No country-specific services for this step yet."
 msgstr "Za ovaj korak još nema usluga specifičnih za državu."
 
@@ -291,34 +326,42 @@ msgid "Services"
 msgstr "Usluge"
 
 #: catalog/templates/catalog/service_detail.html:34
+msgid "Delivered by"
+msgstr "Uslugu pruža"
+
+#: catalog/templates/catalog/service_detail.html:42
+msgid "Cost"
+msgstr "Trošak"
+
+#: catalog/templates/catalog/service_detail.html:50
 msgid "Offered by"
 msgstr "Pruža"
 
-#: catalog/templates/catalog/service_detail.html:38
+#: catalog/templates/catalog/service_detail.html:54
 msgid "What the initiator needs to provide"
 msgstr "Što inicijator treba dostaviti"
 
-#: catalog/templates/catalog/service_detail.html:42
+#: catalog/templates/catalog/service_detail.html:58
 msgid "Result"
 msgstr "Rezultat"
 
-#: catalog/templates/catalog/service_detail.html:46
+#: catalog/templates/catalog/service_detail.html:62
 msgid "Remaining hurdles"
 msgstr "Preostale prepreke"
 
-#: catalog/templates/catalog/service_detail.html:56 templates/base.html:131
+#: catalog/templates/catalog/service_detail.html:72 templates/base.html:131
 msgid "Lifecycle Phases"
 msgstr "Faze projekta"
 
-#: catalog/templates/catalog/service_detail.html:67
+#: catalog/templates/catalog/service_detail.html:83
 msgid "No phases assigned."
 msgstr "Nema dodijeljenih faza."
 
-#: catalog/templates/catalog/service_detail.html:72
+#: catalog/templates/catalog/service_detail.html:88
 msgid "Hurdles Addressed"
 msgstr "Prepreke koje se rješavaju"
 
-#: catalog/templates/catalog/service_detail.html:86
+#: catalog/templates/catalog/service_detail.html:102
 msgid "No hurdles assigned."
 msgstr "Nema dodijeljenih prepreka."
 
@@ -381,7 +424,7 @@ msgstr "Nema pronađenih usluga."
 msgid "Clear filters"
 msgstr "Očisti filtre"
 
-#: catalog/views.py:153
+#: catalog/views.py:169
 #, python-format
 msgid "%(country)s is now your default country."
 msgstr "%(country)s je sada vaša zadana država."
@@ -605,9 +648,8 @@ msgstr "poveznice na usluge"
 #: initiators/templates/initiators/initiator_detail.html:6
 #: initiators/templates/initiators/initiator_form.html:10
 #: initiators/templates/initiators/initiator_list.html:3
-#: initiators/templates/initiators/initiator_list.html:6
-#: templates/base.html:44 templates/base.html:46 templates/base.html:123
-#: templates/home.html:202
+#: initiators/templates/initiators/initiator_list.html:6 templates/base.html:44
+#: templates/base.html:46 templates/base.html:123 templates/home.html:202
 msgid "Initiators"
 msgstr "Inicijatori"
 
@@ -836,8 +878,8 @@ msgid ""
 "No services applied yet. <a href=\"%(add_url)s\">Add the first service</a> "
 "or <a href=\"%(guidebook_url)s\">browse the guidebook</a>."
 msgstr ""
-"Još nema primijenjenih usluga. <a href=\"%(add_url)s\">Dodajte prvu "
-"uslugu</a> ili <a href=\"%(guidebook_url)s\">pregledajte vodič</a>."
+"Još nema primijenjenih usluga. <a href=\"%(add_url)s\">Dodajte prvu uslugu</"
+"a> ili <a href=\"%(guidebook_url)s\">pregledajte vodič</a>."
 
 #: initiators/templates/initiators/project_form.html:26
 msgid "Project basics"
@@ -930,7 +972,8 @@ msgstr "Informacije o usluzi „%(service)s“ za vaš projekt „%(project)s“
 msgid ""
 "Hello %(name)s,\n"
 "\n"
-"please open the following link to read about the service \"%(service)s\" and to send us your note:\n"
+"please open the following link to read about the service \"%(service)s\" and "
+"to send us your note:\n"
 "\n"
 "%(url)s\n"
 "\n"
@@ -939,7 +982,8 @@ msgid ""
 msgstr ""
 "Poštovani/a %(name)s,\n"
 "\n"
-"molimo otvorite sljedeću poveznicu kako biste pročitali informacije o usluzi „%(service)s“ i poslali nam svoju bilješku:\n"
+"molimo otvorite sljedeću poveznicu kako biste pročitali informacije o usluzi "
+"„%(service)s“ i poslali nam svoju bilješku:\n"
 "\n"
 "%(url)s\n"
 "\n"
@@ -977,8 +1021,8 @@ msgid ""
 "Link for \"%(service)s\" created. Copy it or send it by email to the "
 "initiator."
 msgstr ""
-"Poveznica za „%(service)s“ je izrađena. Kopirajte je ili je pošaljite "
-"e-poštom inicijatoru."
+"Poveznica za „%(service)s“ je izrađena. Kopirajte je ili je pošaljite e-"
+"poštom inicijatoru."
 
 #: initiators/views.py:291
 msgid "The link was revoked and no longer works."
@@ -1131,14 +1175,14 @@ msgstr "Podrška energetskoj tranziciji kroz djelovanje zajednice"
 #: templates/home.html:40
 msgid ""
 "The <strong>DISCOVER project</strong> (co-funded by the EU LIFE Programme) "
-"helps local energy agencies across Europe support citizens who want to start"
-" or join a Community Energy Project (CEP). These projects — from solar "
+"helps local energy agencies across Europe support citizens who want to start "
+"or join a Community Energy Project (CEP). These projects — from solar "
 "cooperatives to renewable energy communities — play a key role in the clean "
 "energy transition."
 msgstr ""
 "<strong>Projekt DISCOVER</strong> (sufinanciran iz programa EU-a LIFE) "
-"pomaže lokalnim energetskim agencijama diljem Europe da podupru građane koji"
-" žele pokrenuti projekt energetske zajednice (CEP) ili mu se pridružiti. Ti "
+"pomaže lokalnim energetskim agencijama diljem Europe da podupru građane koji "
+"žele pokrenuti projekt energetske zajednice (CEP) ili mu se pridružiti. Ti "
 "projekti – od solarnih zadruga do zajednica obnovljive energije – imaju "
 "ključnu ulogu u prijelazu na čistu energiju."
 
@@ -1234,8 +1278,8 @@ msgid ""
 "to handover."
 msgstr ""
 "Od odobrenog projekta do postrojenja u radu. Nabava, izgradnja, priključak "
-"na mrežu i puštanje u pogon. Težište se s planske dokumentacije prebacuje na"
-" fizičku izvedbu – 8 koraka vodi projekt do primopredaje."
+"na mrežu i puštanje u pogon. Težište se s planske dokumentacije prebacuje na "
+"fizičku izvedbu – 8 koraka vodi projekt do primopredaje."
 
 #: templates/home.html:123
 msgid "Procurement & contractor selection"
@@ -1301,8 +1345,8 @@ msgstr "Namijenjen voditeljima energetskih agencija koji podupiru inicijatore"
 
 #: templates/home.html:166
 msgid ""
-"Browse and search all support services available to CEP initiators, filtered"
-" by lifecycle phase or discipline. Know exactly what help is available at "
+"Browse and search all support services available to CEP initiators, filtered "
+"by lifecycle phase or discipline. Know exactly what help is available at "
 "each step."
 msgstr ""
 "Pregledajte i pretražujte sve usluge podrške dostupne inicijatorima CEP-a, "
@@ -1318,8 +1362,8 @@ msgid ""
 "Maintain records for each initiator — contact details, project history, and "
 "the services they have received — so nothing falls through the cracks."
 msgstr ""
-"Vodite evidenciju za svakog inicijatora – kontakt podatke, povijest projekta"
-" i primljene usluge – kako ništa ne bi promaknulo."
+"Vodite evidenciju za svakog inicijatora – kontakt podatke, povijest projekta "
+"i primljene usluge – kako ništa ne bi promaknulo."
 
 #: templates/home.html:184
 msgid "Project Tracking"
@@ -1331,8 +1375,8 @@ msgid ""
 "note decisions, and log which services have been applied and with what "
 "outcomes."
 msgstr ""
-"Pratite svaki projekt kroz njegove faze. Bilježite promjene faza i odluke te"
-" evidentirajte koje su usluge primijenjene i s kojim ishodom."
+"Pratite svaki projekt kroz njegove faze. Bilježite promjene faza i odluke te "
+"evidentirajte koje su usluge primijenjene i s kojim ishodom."
 
 #: templates/home.html:198
 msgid "Ready to get started?"
@@ -1343,8 +1387,8 @@ msgid ""
 "Browse the service catalog to explore available support, or open an "
 "initiator record to review their project."
 msgstr ""
-"Pregledajte katalog usluga kako biste pronašli dostupnu podršku ili otvorite"
-" zapis inicijatora kako biste pregledali njegov projekt."
+"Pregledajte katalog usluga kako biste pronašli dostupnu podršku ili otvorite "
+"zapis inicijatora kako biste pregledali njegov projekt."
 
 #: templates/home.html:208
 msgid "Sign in to manage initiators and projects"

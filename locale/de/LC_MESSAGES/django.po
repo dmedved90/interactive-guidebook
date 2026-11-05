@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-01 21:20+0000\n"
+"POT-Creation-Date: 2026-11-05 17:18+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Draft translation - pending review by native speakers\n"
 "Language-Team: DISCOVER partners (de)\n"
@@ -39,8 +39,8 @@ msgid ""
 "Shown in the server log. You can also print it with: python manage.py "
 "setup_code"
 msgstr ""
-"Steht im Server-Protokoll. Sie können ihn auch so ausgeben: python manage.py"
-" setup_code"
+"Steht im Server-Protokoll. Sie können ihn auch so ausgeben: python manage.py "
+"setup_code"
 
 #: accounts/forms.py:19
 msgid "First name"
@@ -200,11 +200,23 @@ msgstr "Betrieb"
 msgid "countries"
 msgstr "Länder"
 
-#: catalog/models.py:132 catalog/models.py:153
+#: catalog/models.py:48
+msgid "Building a solar power plant"
+msgstr "Bau einer Photovoltaikanlage"
+
+#: catalog/models.py:53
+msgid "One-stop shop"
+msgstr "Anlaufstelle (One-Stop-Shop)"
+
+#: catalog/models.py:54
+msgid "External provider"
+msgstr "Externer Anbieter"
+
+#: catalog/models.py:157 catalog/models.py:178
 msgid "translation"
 msgstr "Übersetzung"
 
-#: catalog/models.py:133 catalog/models.py:154
+#: catalog/models.py:158 catalog/models.py:179
 msgid "translations"
 msgstr "Übersetzungen"
 
@@ -249,15 +261,28 @@ msgstr ""
 "Pilotregion zu sehen."
 
 #: catalog/templates/catalog/guidebook.html:42
+msgid "Theme"
+msgstr "Thema"
+
+#: catalog/templates/catalog/guidebook.html:44
+msgid "All steps"
+msgstr "Alle Schritte"
+
+#: catalog/templates/catalog/guidebook.html:49
 msgid "Show"
 msgstr "Anzeigen"
 
-#: catalog/templates/catalog/guidebook.html:48
+#: catalog/templates/catalog/guidebook.html:55
 #, python-format
 msgid "Make %(country)s my default"
 msgstr "%(country)s als Standard festlegen"
 
-#: catalog/templates/catalog/guidebook.html:59 templates/home.html:98
+#: catalog/templates/catalog/guidebook.html:61
+#, python-format
+msgid "<strong>%(theme)s</strong>: showing %(shown)s of %(total)s steps."
+msgstr "<strong>%(theme)s</strong>: %(shown)s von %(total)s Schritten werden angezeigt."
+
+#: catalog/templates/catalog/guidebook.html:72 templates/home.html:98
 #: templates/home.html:121 templates/home.html:143
 #, python-format
 msgid "%(counter)s step"
@@ -265,7 +290,7 @@ msgid_plural "%(counter)s steps"
 msgstr[0] "%(counter)s Schritt"
 msgstr[1] "%(counter)s Schritte"
 
-#: catalog/templates/catalog/guidebook.html:74
+#: catalog/templates/catalog/guidebook.html:87
 #: catalog/templates/catalog/service_list.html:63
 #, python-format
 msgid "%(counter)s service"
@@ -273,17 +298,27 @@ msgid_plural "%(counter)s services"
 msgstr[0] "%(counter)s Service"
 msgstr[1] "%(counter)s Services"
 
-#: catalog/templates/catalog/guidebook.html:86
+#: catalog/templates/catalog/guidebook.html:100
+#: catalog/templates/catalog/service_detail.html:38
+msgid "Duration"
+msgstr "Dauer"
+
+#: catalog/templates/catalog/guidebook.html:101
+#: catalog/templates/catalog/service_detail.html:46
+msgid "Cost estimate"
+msgstr "Kostenschätzung"
+
+#: catalog/templates/catalog/guidebook.html:106
 msgid "Details"
 msgstr "Details"
 
-#: catalog/templates/catalog/guidebook.html:88
+#: catalog/templates/catalog/guidebook.html:108
 #: catalog/templates/catalog/service_detail.html:26
 #: initiators/templates/initiators/service_link.html:40
 msgid "Official link"
 msgstr "Offizieller Link"
 
-#: catalog/templates/catalog/guidebook.html:100
+#: catalog/templates/catalog/guidebook.html:120
 msgid "No country-specific services for this step yet."
 msgstr "Für diesen Schritt gibt es noch keine länderspezifischen Services."
 
@@ -294,34 +329,42 @@ msgid "Services"
 msgstr "Services"
 
 #: catalog/templates/catalog/service_detail.html:34
+msgid "Delivered by"
+msgstr "Erbracht von"
+
+#: catalog/templates/catalog/service_detail.html:42
+msgid "Cost"
+msgstr "Kosten"
+
+#: catalog/templates/catalog/service_detail.html:50
 msgid "Offered by"
 msgstr "Angeboten von"
 
-#: catalog/templates/catalog/service_detail.html:38
+#: catalog/templates/catalog/service_detail.html:54
 msgid "What the initiator needs to provide"
 msgstr "Was der Initiator bereitstellen muss"
 
-#: catalog/templates/catalog/service_detail.html:42
+#: catalog/templates/catalog/service_detail.html:58
 msgid "Result"
 msgstr "Ergebnis"
 
-#: catalog/templates/catalog/service_detail.html:46
+#: catalog/templates/catalog/service_detail.html:62
 msgid "Remaining hurdles"
 msgstr "Verbleibende Hürden"
 
-#: catalog/templates/catalog/service_detail.html:56 templates/base.html:131
+#: catalog/templates/catalog/service_detail.html:72 templates/base.html:131
 msgid "Lifecycle Phases"
 msgstr "Projektphasen"
 
-#: catalog/templates/catalog/service_detail.html:67
+#: catalog/templates/catalog/service_detail.html:83
 msgid "No phases assigned."
 msgstr "Keine Phasen zugeordnet."
 
-#: catalog/templates/catalog/service_detail.html:72
+#: catalog/templates/catalog/service_detail.html:88
 msgid "Hurdles Addressed"
 msgstr "Behandelte Hürden"
 
-#: catalog/templates/catalog/service_detail.html:86
+#: catalog/templates/catalog/service_detail.html:102
 msgid "No hurdles assigned."
 msgstr "Keine Hürden zugeordnet."
 
@@ -381,7 +424,7 @@ msgstr "Keine Services gefunden."
 msgid "Clear filters"
 msgstr "Filter zurücksetzen"
 
-#: catalog/views.py:153
+#: catalog/views.py:169
 #, python-format
 msgid "%(country)s is now your default country."
 msgstr "%(country)s ist jetzt Ihr Standardland."
@@ -606,9 +649,8 @@ msgstr "Service-Links"
 #: initiators/templates/initiators/initiator_detail.html:6
 #: initiators/templates/initiators/initiator_form.html:10
 #: initiators/templates/initiators/initiator_list.html:3
-#: initiators/templates/initiators/initiator_list.html:6
-#: templates/base.html:44 templates/base.html:46 templates/base.html:123
-#: templates/home.html:202
+#: initiators/templates/initiators/initiator_list.html:6 templates/base.html:44
+#: templates/base.html:46 templates/base.html:123 templates/home.html:202
 msgid "Initiators"
 msgstr "Initiatoren"
 
@@ -804,8 +846,7 @@ msgstr "Ihre Nachricht:"
 
 #: initiators/templates/initiators/project_detail.html:126
 msgid "Revoke this link? The initiator will no longer be able to open it."
-msgstr ""
-"Diesen Link widerrufen? Der Initiator kann ihn dann nicht mehr öffnen."
+msgstr "Diesen Link widerrufen? Der Initiator kann ihn dann nicht mehr öffnen."
 
 #: initiators/templates/initiators/project_detail.html:128
 msgid "Revoke link"
@@ -860,8 +901,8 @@ msgstr "Alle Projekte"
 #: initiators/templates/initiators/project_list.html:26
 msgid "No projects yet. Projects are created from an initiator's page —"
 msgstr ""
-"Noch keine Projekte. Projekte werden auf der Seite eines Initiators angelegt"
-" –"
+"Noch keine Projekte. Projekte werden auf der Seite eines Initiators angelegt "
+"–"
 
 #: initiators/templates/initiators/project_list.html:27
 msgid "choose an initiator"
@@ -934,7 +975,8 @@ msgstr "Informationen zu „%(service)s“ für Ihr Projekt „%(project)s“"
 msgid ""
 "Hello %(name)s,\n"
 "\n"
-"please open the following link to read about the service \"%(service)s\" and to send us your note:\n"
+"please open the following link to read about the service \"%(service)s\" and "
+"to send us your note:\n"
 "\n"
 "%(url)s\n"
 "\n"
@@ -943,7 +985,8 @@ msgid ""
 msgstr ""
 "Guten Tag %(name)s,\n"
 "\n"
-"bitte öffnen Sie den folgenden Link, um Informationen zum Service „%(service)s“ zu lesen und uns Ihre Notiz zu senden:\n"
+"bitte öffnen Sie den folgenden Link, um Informationen zum Service "
+"„%(service)s“ zu lesen und uns Ihre Notiz zu senden:\n"
 "\n"
 "%(url)s\n"
 "\n"
@@ -981,8 +1024,8 @@ msgid ""
 "Link for \"%(service)s\" created. Copy it or send it by email to the "
 "initiator."
 msgstr ""
-"Link für „%(service)s“ erstellt. Kopieren Sie ihn oder senden Sie ihn per "
-"E-Mail an den Initiator."
+"Link für „%(service)s“ erstellt. Kopieren Sie ihn oder senden Sie ihn per E-"
+"Mail an den Initiator."
 
 #: initiators/views.py:291
 msgid "The link was revoked and no longer works."
@@ -1001,8 +1044,8 @@ msgid ""
 "The page you were looking for doesn't exist. It may have been moved or "
 "deleted, or the link may be mistyped."
 msgstr ""
-"Die gesuchte Seite existiert nicht. Sie wurde möglicherweise verschoben oder"
-" gelöscht, oder der Link ist fehlerhaft."
+"Die gesuchte Seite existiert nicht. Sie wurde möglicherweise verschoben oder "
+"gelöscht, oder der Link ist fehlerhaft."
 
 #: templates/404.html:16
 msgid "Go to the Guidebook"
@@ -1137,16 +1180,16 @@ msgstr "Die Energiewende durch gemeinschaftliches Handeln unterstützen"
 #: templates/home.html:40
 msgid ""
 "The <strong>DISCOVER project</strong> (co-funded by the EU LIFE Programme) "
-"helps local energy agencies across Europe support citizens who want to start"
-" or join a Community Energy Project (CEP). These projects — from solar "
+"helps local energy agencies across Europe support citizens who want to start "
+"or join a Community Energy Project (CEP). These projects — from solar "
 "cooperatives to renewable energy communities — play a key role in the clean "
 "energy transition."
 msgstr ""
 "Das <strong>DISCOVER-Projekt</strong> (kofinanziert aus dem EU-Programm "
 "LIFE) hilft lokalen Energieagenturen in ganz Europa, Bürgerinnen und Bürger "
-"zu unterstützen, die ein Energiegemeinschaftsprojekt (CEP) gründen oder sich"
-" daran beteiligen möchten. Diese Projekte – von Solargenossenschaften bis zu"
-" Erneuerbare-Energie-Gemeinschaften – spielen eine Schlüsselrolle in der "
+"zu unterstützen, die ein Energiegemeinschaftsprojekt (CEP) gründen oder sich "
+"daran beteiligen möchten. Diese Projekte – von Solargenossenschaften bis zu "
+"Erneuerbare-Energie-Gemeinschaften – spielen eine Schlüsselrolle in der "
 "Energiewende."
 
 #: templates/home.html:48
@@ -1243,8 +1286,8 @@ msgid ""
 msgstr ""
 "Vom genehmigten Projekt zur betriebsbereiten Anlage. Beschaffung, Bau, "
 "Netzanschluss und Inbetriebnahme. Der Schwerpunkt verlagert sich von "
-"Planungsunterlagen zur praktischen Umsetzung – 8 Schritte führen das Projekt"
-" bis zur Übergabe."
+"Planungsunterlagen zur praktischen Umsetzung – 8 Schritte führen das Projekt "
+"bis zur Übergabe."
 
 #: templates/home.html:123
 msgid "Procurement & contractor selection"
@@ -1312,8 +1355,8 @@ msgstr ""
 
 #: templates/home.html:166
 msgid ""
-"Browse and search all support services available to CEP initiators, filtered"
-" by lifecycle phase or discipline. Know exactly what help is available at "
+"Browse and search all support services available to CEP initiators, filtered "
+"by lifecycle phase or discipline. Know exactly what help is available at "
 "each step."
 msgstr ""
 "Durchsuchen Sie alle Unterstützungsangebote für CEP-Initiatoren, gefiltert "
@@ -1342,8 +1385,8 @@ msgid ""
 "note decisions, and log which services have been applied and with what "
 "outcomes."
 msgstr ""
-"Verfolgen Sie jedes Projekt durch seine Phasen. Halten Sie Phasenwechsel und"
-" Entscheidungen fest und dokumentieren Sie, welche Services mit welchem "
+"Verfolgen Sie jedes Projekt durch seine Phasen. Halten Sie Phasenwechsel und "
+"Entscheidungen fest und dokumentieren Sie, welche Services mit welchem "
 "Ergebnis eingesetzt wurden."
 
 #: templates/home.html:198
@@ -1367,8 +1410,8 @@ msgid ""
 "The guidebook and the service catalog are open to everyone. Sign in to "
 "access initiator records and project tracking."
 msgstr ""
-"Der Leitfaden und der Servicekatalog stehen allen offen. Melden Sie sich an,"
-" um auf Initiatoren und die Projektverfolgung zuzugreifen."
+"Der Leitfaden und der Servicekatalog stehen allen offen. Melden Sie sich an, "
+"um auf Initiatoren und die Projektverfolgung zuzugreifen."
 
 #: templates/home.html:212
 msgid "Open Guidebook"

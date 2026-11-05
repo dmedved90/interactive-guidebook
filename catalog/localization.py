@@ -14,6 +14,7 @@ from .models import ServiceTranslation, StepTranslation
 
 SERVICE_TEXT_FIELDS = (
     'name', 'summary', 'description', 'stakeholder', 'service_input', 'result', 'remaining_hurdles',
+    'duration', 'cost', 'cost_estimate',
 )
 STEP_TEXT_FIELDS = ('title', 'description', 'objective', 'description_long')
 TEXT_PARAM = 'text'

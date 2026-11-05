@@ -157,3 +157,15 @@
 }
 
 .guidebook-container { max-width: 960px; }
+
+/* Duration, cost estimate and provider on service cards */
+.gb-service-facts { display: flex; gap: 0.4rem; flex-wrap: wrap; margin: 0.4rem 0 0.2rem; }
+.fact-tag {
+  font-size: 0.75rem; padding: 0.15em 0.55em; border-radius: 4px;
+  background: #f3f4f6; color: #444; white-space: nowrap;
+}
+.fact-tag.provider-oss      { background: #e8f4fd; color: #1f5f8b; font-weight: 600; }
+.fact-tag.provider-external { background: #fff4e8; color: #8a4b08; font-weight: 600; }
+
+/* Thematic filter */
+.theme-note { margin: 0 0 1.5rem; padding: 0.6rem 1rem; background: #fffbe6; border-left: 4px solid #f2c200; border-radius: 4px; }

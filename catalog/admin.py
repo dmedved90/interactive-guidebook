@@ -68,8 +68,8 @@ class CountryAdmin(ContentFileAdmin):
 
 @admin.register(GeneralStep)
 class GeneralStepAdmin(ContentFileAdmin):
-    list_display = ('sort_order', 'title', 'phase', 'topic')
-    list_filter = ('phase', 'topic')
+    list_display = ('sort_order', 'title', 'phase', 'topic', 'themes')
+    list_filter = ('phase', 'topic', 'themes')
     ordering = ('sort_order',)
     readonly_fields = ('content_file',)
     inlines = [StepTranslationInline]
@@ -103,7 +103,7 @@ class HurdleAdmin(admin.ModelAdmin):
 @admin.register(Service)
 class ServiceAdmin(ContentFileAdmin):
     list_display = ('name', 'country', 'general_step', 'is_active')
-    list_filter = ('is_active', 'country', 'phases')
+    list_filter = ('is_active', 'country', 'phases', 'provider')
     search_fields = ('name', 'summary')
     readonly_fields = ('content_file',)
     inlines = [ServiceTranslationInline, ServicePhaseInline, ServiceHurdleInline]

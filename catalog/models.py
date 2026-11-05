@@ -43,6 +43,18 @@ class Country(models.Model):
         return self.name
 
 
+# Thematic filters of the guidebook: steps list the themes they belong to (``themes:`` in YAML).
+THEMES = {
+    'solar': _('Building a solar power plant'),
+}
+
+# Who delivers a service: the one-stop shop (energy agency) itself or an external provider.
+PROVIDER_CHOICES = [
+    ('oss', _('One-stop shop')),
+    ('external', _('External provider')),
+]
+
+
 class GeneralStep(models.Model):
     title        = models.CharField(max_length=200)
     description  = models.TextField(blank=True)
@@ -50,6 +62,8 @@ class GeneralStep(models.Model):
     objective    = models.TextField(blank=True)
     phase        = models.ForeignKey(Phase, on_delete=models.PROTECT, related_name='general_steps')
     topic        = models.CharField(max_length=50, blank=True)  # Social / PV Plant / REC
+    # Comma-separated theme keys (THEMES) for the guidebook's thematic filter.
+    themes       = models.CharField(max_length=200, blank=True)
     sort_order   = models.PositiveIntegerField(default=0)
     # File name in data/steps/<phase>/ that this step comes from (see catalog/content.py).
     source_key   = models.CharField(max_length=100, unique=True, null=True, blank=True, editable=False)
@@ -59,6 +73,10 @@ class GeneralStep(models.Model):
 
     def __str__(self):
         return self.title
+
+    @property
+    def theme_list(self):
+        return [t for t in self.themes.split(',') if t]
 
 
 class Hurdle(models.Model):
@@ -99,6 +117,10 @@ class Service(models.Model):
     service_input   = models.TextField(blank=True)
     result          = models.TextField(blank=True)
     remaining_hurdles = models.TextField(blank=True)
+    duration        = models.CharField(max_length=100, blank=True)
+    cost            = models.CharField(max_length=200, blank=True)
+    cost_estimate   = models.CharField(max_length=200, blank=True)
+    provider        = models.CharField(max_length=20, choices=PROVIDER_CHOICES, blank=True)
     # "<country>/<file name>" in data/services/ that this service comes from.
     source_key   = models.CharField(max_length=110, unique=True, null=True, blank=True, editable=False)
 
@@ -126,6 +148,9 @@ class ServiceTranslation(models.Model):
     service_input = models.TextField(blank=True)
     result        = models.TextField(blank=True)
     remaining_hurdles = models.TextField(blank=True)
+    duration      = models.CharField(max_length=100, blank=True)
+    cost          = models.CharField(max_length=200, blank=True)
+    cost_estimate = models.CharField(max_length=200, blank=True)
     reviewed = models.BooleanField(default=False)
 
     class Meta:

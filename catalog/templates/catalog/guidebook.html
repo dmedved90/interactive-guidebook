@@ -39,6 +39,13 @@
         <option value="{{ c.code }}"{% if country == c %} selected{% endif %}>{{ c.name }}</option>
         {% endfor %}
       </select>
+      <label class="visually-hidden" for="gb-theme">{% translate "Theme" %}</label>
+      <select id="gb-theme" name="theme" class="country-picker-select" data-autosubmit>
+        <option value=""{% if not active_theme %} selected{% endif %}>{% translate "All steps" %}</option>
+        {% for key, label in themes %}
+        <option value="{{ key }}"{% if active_theme == key %} selected{% endif %}>{{ label }}</option>
+        {% endfor %}
+      </select>
       <noscript><button class="btn btn-primary" type="submit">{% translate "Show" %}</button></noscript>
     </form>
     {% if can_save_default %}
@@ -49,6 +56,12 @@
     </form>
     {% endif %}
   </div>
+
+  {% if active_theme %}
+  <p class="theme-note">{% blocktranslate trimmed with theme=active_theme_label shown=shown_steps total=total_steps %}
+    <strong>{{ theme }}</strong>: showing {{ shown }} of {{ total }} steps.
+  {% endblocktranslate %}</p>
+  {% endif %}
 
   {% for pd in phase_data %}
   {% with phase=pd.phase steps=pd.steps %}
@@ -82,6 +95,13 @@
             <div class="gb-service-card" lang="{{ svc.text.language }}">
               <div class="gb-service-title">{{ svc.text.name }}</div>
               {% if svc.text.summary %}<div class="gb-service-summary">{{ svc.text.summary }}</div>{% endif %}
+              {% if svc.text.duration or svc.text.cost_estimate or svc.provider %}
+              <div class="gb-service-facts">
+                {% if svc.text.duration %}<span class="fact-tag" title="{% translate 'Duration' %}">⏱ {{ svc.text.duration }}</span>{% endif %}
+                {% if svc.text.cost_estimate %}<span class="fact-tag" title="{% translate 'Cost estimate' %}">€ {{ svc.text.cost_estimate }}</span>{% endif %}
+                {% if svc.provider %}<span class="fact-tag provider-{{ svc.provider }}">{{ svc.get_provider_display }}</span>{% endif %}
+              </div>
+              {% endif %}
               <div class="gb-service-footer">
                 <a href="{% url 'catalog:service_detail' svc.slug %}" class="btn-sm">{% translate "Details" %}</a>
                 {% if svc.official_link %}

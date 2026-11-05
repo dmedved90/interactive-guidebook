@@ -30,6 +30,7 @@ description: |-
 | `description` | no | One or two sentences shown in the guidebook |
 | `objective` | no | What the step should achieve |
 | `description_long` | no | Longer explanation |
+| `themes` | no | Thematic filters the step belongs to, e.g. `[solar]` (building a solar power plant) |
 
 Moving a file to another phase folder moves the step (and its services) to that phase.
 
@@ -46,6 +47,10 @@ Moving a file to another phase folder moves the step (and its services) to that 
 | `input` | no | What the initiator needs to provide |
 | `result` | no | What the service delivers |
 | `remaining_hurdles` | no | Known difficulties |
+| `duration` | no | Typical duration, e.g. `4-8 weeks` (max. 100) |
+| `cost` | no | Cost category, e.g. `Medium` or `0.5% of the investment per year` (max. 200) |
+| `cost_estimate` | no | Indicative cost, e.g. `1,500-4,000 EUR` (max. 200) |
+| `provider` | no | Who delivers it: `oss` (the one-stop shop) or `external` (an external provider) |
 | `extra_phases` | no | Further phases the service applies to, e.g. `[operation]` (its step's phase is always included) |
 | `active` | no | `false` hides the service without deleting it |
 
@@ -69,8 +74,8 @@ de:
   `it` for Italy.
 - **Guidebook steps** can have a block for each of `de`, `fr`, `it`, `hr` and `bg`.
 - Translatable fields: for services `name`, `summary`, `description`, `stakeholder`, `input`,
-  `result`, `remaining_hurdles`; for steps `title`, `description`, `objective`,
-  `description_long`. Other fields (links, step, order, topic) are never translated.
+  `result`, `remaining_hurdles`, `duration`, `cost`, `cost_estimate`; for steps `title`, `description`, `objective`,
+  `description_long`. Other fields (links, step, order, topic, themes, provider) are never translated.
 - Every field in a block is optional; the site shows the English text where a translation is
   missing. Length limits are the same as for English.
 - `reviewed: false` marks a draft; the site then shows a "draft translation" note. A native

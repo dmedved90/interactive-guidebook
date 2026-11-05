@@ -28,8 +28,24 @@
     {% endif %}
 
     {% with text=service.text %}
-    {% if text.stakeholder or text.service_input or text.result or text.remaining_hurdles %}
+    {% if text.stakeholder or text.service_input or text.result or text.remaining_hurdles or text.duration or text.cost or text.cost_estimate or service.provider %}
     <dl class="service-facts">
+      {% if service.provider %}
+      <dt>{% translate "Delivered by" %}</dt>
+      <dd>{{ service.get_provider_display }}</dd>
+      {% endif %}
+      {% if text.duration %}
+      <dt>{% translate "Duration" %}</dt>
+      <dd lang="{{ text.language }}">{{ text.duration }}</dd>
+      {% endif %}
+      {% if text.cost %}
+      <dt>{% translate "Cost" %}</dt>
+      <dd lang="{{ text.language }}">{{ text.cost }}</dd>
+      {% endif %}
+      {% if text.cost_estimate %}
+      <dt>{% translate "Cost estimate" %}</dt>
+      <dd lang="{{ text.language }}">{{ text.cost_estimate }}</dd>
+      {% endif %}
       {% if text.stakeholder %}
       <dt>{% translate "Offered by" %}</dt>
       <dd lang="{{ text.language }}">{{ text.stakeholder }}</dd>

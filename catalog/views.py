@@ -12,7 +12,7 @@ from .localization import (
     current_language, localize_service_page, localize_services, localize_steps, service_translations,
     step_translations,
 )
-from .models import Country, Phase, Service
+from .models import THEMES, Country, Phase, Service
 
 ALL_COUNTRIES = 'all'
 
@@ -122,17 +122,33 @@ class GuidebookView(CountrySelectionMixin, TemplateView):
         for service in localize_services(services.order_by('pk')):
             services_by_step[service.general_step_id].append(service)
 
+        # ?theme=<key> shows only the steps of that theme (e.g. building a solar power plant).
+        theme = self.request.GET.get('theme', '').strip()
+        if theme not in THEMES:
+            theme = ''
+
         phase_data = []
         has_draft = any(s.text.is_draft for step in services_by_step.values() for s in step)
+        total_steps = shown_steps = 0
         for phase in Phase.objects.prefetch_related('general_steps', step_translations('general_steps__translations')):
+            all_steps = list(phase.general_steps.all())
+            total_steps += len(all_steps)
             steps = [
                 {'step': step, 'services': services_by_step[step.pk]}
-                for step in localize_steps(phase.general_steps.all())
+                for step in localize_steps(all_steps)
+                if not theme or theme in step.theme_list
             ]
+            shown_steps += len(steps)
             has_draft = has_draft or any(entry['step'].text.is_draft for entry in steps)
-            phase_data.append({'phase': phase, 'steps': steps})
+            if steps or not theme:
+                phase_data.append({'phase': phase, 'steps': steps})
 
         ctx['phase_data'] = phase_data
+        ctx['themes'] = THEMES.items()
+        ctx['active_theme'] = theme
+        ctx['active_theme_label'] = THEMES.get(theme, '')
+        ctx['shown_steps'] = shown_steps
+        ctx['total_steps'] = total_steps
         ctx['has_draft_translation'] = has_draft
         user = self.request.user
         ctx['can_save_default'] = (

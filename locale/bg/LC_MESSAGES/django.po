@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-01 21:20+0000\n"
+"POT-Creation-Date: 2026-11-05 17:18+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Draft translation - pending review by native speakers\n"
 "Language-Team: DISCOVER partners (bg)\n"
@@ -199,11 +199,23 @@ msgstr "Експлоатация"
 msgid "countries"
 msgstr "държави"
 
-#: catalog/models.py:132 catalog/models.py:153
+#: catalog/models.py:48
+msgid "Building a solar power plant"
+msgstr "Изграждане на соларна централа"
+
+#: catalog/models.py:53
+msgid "One-stop shop"
+msgstr "Обслужване на едно гише"
+
+#: catalog/models.py:54
+msgid "External provider"
+msgstr "Външен доставчик"
+
+#: catalog/models.py:157 catalog/models.py:178
 msgid "translation"
 msgstr "превод"
 
-#: catalog/models.py:133 catalog/models.py:154
+#: catalog/models.py:158 catalog/models.py:179
 msgid "translations"
 msgstr "преводи"
 
@@ -249,15 +261,28 @@ msgstr ""
 "свързани с вашия пилотен регион."
 
 #: catalog/templates/catalog/guidebook.html:42
+msgid "Theme"
+msgstr "Тема"
+
+#: catalog/templates/catalog/guidebook.html:44
+msgid "All steps"
+msgstr "Всички стъпки"
+
+#: catalog/templates/catalog/guidebook.html:49
 msgid "Show"
 msgstr "Покажи"
 
-#: catalog/templates/catalog/guidebook.html:48
+#: catalog/templates/catalog/guidebook.html:55
 #, python-format
 msgid "Make %(country)s my default"
 msgstr "Задай %(country)s по подразбиране"
 
-#: catalog/templates/catalog/guidebook.html:59 templates/home.html:98
+#: catalog/templates/catalog/guidebook.html:61
+#, python-format
+msgid "<strong>%(theme)s</strong>: showing %(shown)s of %(total)s steps."
+msgstr "<strong>%(theme)s</strong>: показани са %(shown)s от %(total)s стъпки."
+
+#: catalog/templates/catalog/guidebook.html:72 templates/home.html:98
 #: templates/home.html:121 templates/home.html:143
 #, python-format
 msgid "%(counter)s step"
@@ -265,7 +290,7 @@ msgid_plural "%(counter)s steps"
 msgstr[0] "%(counter)s стъпка"
 msgstr[1] "%(counter)s стъпки"
 
-#: catalog/templates/catalog/guidebook.html:74
+#: catalog/templates/catalog/guidebook.html:87
 #: catalog/templates/catalog/service_list.html:63
 #, python-format
 msgid "%(counter)s service"
@@ -273,17 +298,27 @@ msgid_plural "%(counter)s services"
 msgstr[0] "%(counter)s услуга"
 msgstr[1] "%(counter)s услуги"
 
-#: catalog/templates/catalog/guidebook.html:86
+#: catalog/templates/catalog/guidebook.html:100
+#: catalog/templates/catalog/service_detail.html:38
+msgid "Duration"
+msgstr "Продължителност"
+
+#: catalog/templates/catalog/guidebook.html:101
+#: catalog/templates/catalog/service_detail.html:46
+msgid "Cost estimate"
+msgstr "Оценка на разходите"
+
+#: catalog/templates/catalog/guidebook.html:106
 msgid "Details"
 msgstr "Подробности"
 
-#: catalog/templates/catalog/guidebook.html:88
+#: catalog/templates/catalog/guidebook.html:108
 #: catalog/templates/catalog/service_detail.html:26
 #: initiators/templates/initiators/service_link.html:40
 msgid "Official link"
 msgstr "Официална връзка"
 
-#: catalog/templates/catalog/guidebook.html:100
+#: catalog/templates/catalog/guidebook.html:120
 msgid "No country-specific services for this step yet."
 msgstr "Все още няма услуги за тази стъпка, специфични за държавата."
 
@@ -294,34 +329,42 @@ msgid "Services"
 msgstr "Услуги"
 
 #: catalog/templates/catalog/service_detail.html:34
+msgid "Delivered by"
+msgstr "Предоставя се от"
+
+#: catalog/templates/catalog/service_detail.html:42
+msgid "Cost"
+msgstr "Разходи"
+
+#: catalog/templates/catalog/service_detail.html:50
 msgid "Offered by"
 msgstr "Предлага се от"
 
-#: catalog/templates/catalog/service_detail.html:38
+#: catalog/templates/catalog/service_detail.html:54
 msgid "What the initiator needs to provide"
 msgstr "Какво трябва да предостави инициаторът"
 
-#: catalog/templates/catalog/service_detail.html:42
+#: catalog/templates/catalog/service_detail.html:58
 msgid "Result"
 msgstr "Резултат"
 
-#: catalog/templates/catalog/service_detail.html:46
+#: catalog/templates/catalog/service_detail.html:62
 msgid "Remaining hurdles"
 msgstr "Оставащи пречки"
 
-#: catalog/templates/catalog/service_detail.html:56 templates/base.html:131
+#: catalog/templates/catalog/service_detail.html:72 templates/base.html:131
 msgid "Lifecycle Phases"
 msgstr "Фази на проекта"
 
-#: catalog/templates/catalog/service_detail.html:67
+#: catalog/templates/catalog/service_detail.html:83
 msgid "No phases assigned."
 msgstr "Няма зададени фази."
 
-#: catalog/templates/catalog/service_detail.html:72
+#: catalog/templates/catalog/service_detail.html:88
 msgid "Hurdles Addressed"
 msgstr "Преодолявани пречки"
 
-#: catalog/templates/catalog/service_detail.html:86
+#: catalog/templates/catalog/service_detail.html:102
 msgid "No hurdles assigned."
 msgstr "Няма зададени пречки."
 
@@ -381,7 +424,7 @@ msgstr "Няма намерени услуги."
 msgid "Clear filters"
 msgstr "Изчисти филтрите"
 
-#: catalog/views.py:153
+#: catalog/views.py:169
 #, python-format
 msgid "%(country)s is now your default country."
 msgstr "%(country)s вече е вашата държава по подразбиране."
@@ -605,9 +648,8 @@ msgstr "връзки към услуги"
 #: initiators/templates/initiators/initiator_detail.html:6
 #: initiators/templates/initiators/initiator_form.html:10
 #: initiators/templates/initiators/initiator_list.html:3
-#: initiators/templates/initiators/initiator_list.html:6
-#: templates/base.html:44 templates/base.html:46 templates/base.html:123
-#: templates/home.html:202
+#: initiators/templates/initiators/initiator_list.html:6 templates/base.html:44
+#: templates/base.html:46 templates/base.html:123 templates/home.html:202
 msgid "Initiators"
 msgstr "Инициатори"
 
@@ -932,7 +974,8 @@ msgstr "Информация за „%(service)s“ за вашия проект
 msgid ""
 "Hello %(name)s,\n"
 "\n"
-"please open the following link to read about the service \"%(service)s\" and to send us your note:\n"
+"please open the following link to read about the service \"%(service)s\" and "
+"to send us your note:\n"
 "\n"
 "%(url)s\n"
 "\n"
@@ -941,7 +984,8 @@ msgid ""
 msgstr ""
 "Здравейте, %(name)s,\n"
 "\n"
-"моля, отворете следната връзка, за да прочетете информацията за услугата „%(service)s“ и да ни изпратите вашата бележка:\n"
+"моля, отворете следната връзка, за да прочетете информацията за услугата "
+"„%(service)s“ и да ни изпратите вашата бележка:\n"
 "\n"
 "%(url)s\n"
 "\n"
@@ -1027,8 +1071,8 @@ msgid ""
 "An unexpected error occurred on our side. Please try again in a moment. If "
 "the problem persists, contact your administrator."
 msgstr ""
-"Възникна неочаквана грешка от наша страна. Моля, опитайте отново след малко."
-" Ако проблемът продължи, свържете се с вашия администратор."
+"Възникна неочаквана грешка от наша страна. Моля, опитайте отново след малко. "
+"Ако проблемът продължи, свържете се с вашия администратор."
 
 #: templates/500.html:19
 msgid "Back to the start page"
@@ -1134,8 +1178,8 @@ msgstr "Подкрепа за енергийния преход чрез дей�
 #: templates/home.html:40
 msgid ""
 "The <strong>DISCOVER project</strong> (co-funded by the EU LIFE Programme) "
-"helps local energy agencies across Europe support citizens who want to start"
-" or join a Community Energy Project (CEP). These projects — from solar "
+"helps local energy agencies across Europe support citizens who want to start "
+"or join a Community Energy Project (CEP). These projects — from solar "
 "cooperatives to renewable energy communities — play a key role in the clean "
 "energy transition."
 msgstr ""
@@ -1155,8 +1199,8 @@ msgid ""
 msgstr ""
 "Стартирането на CEP е сложно. Основателите се сблъскват с технически, "
 "правни, финансови и социални предизвикателства, които изискват експертиза в "
-"много области. Мениджърите от енергийните агенции (<em>посредниците</em>) са"
-" в уникална позиция да водят инициаторите по този път, но се нуждаят от "
+"много области. Мениджърите от енергийните агенции (<em>посредниците</em>) са "
+"в уникална позиция да водят инициаторите по този път, но се нуждаят от "
 "структурирани инструменти, за да го правят ефективно."
 
 #: templates/home.html:56
@@ -1307,13 +1351,13 @@ msgstr ""
 
 #: templates/home.html:166
 msgid ""
-"Browse and search all support services available to CEP initiators, filtered"
-" by lifecycle phase or discipline. Know exactly what help is available at "
+"Browse and search all support services available to CEP initiators, filtered "
+"by lifecycle phase or discipline. Know exactly what help is available at "
 "each step."
 msgstr ""
 "Разглеждайте и търсете всички услуги за подкрепа, достъпни за инициаторите "
-"на CEP, филтрирани по фаза или област. Знайте точно каква помощ е налична на"
-" всяка стъпка."
+"на CEP, филтрирани по фаза или област. Знайте точно каква помощ е налична на "
+"всяка стъпка."
 
 #: templates/home.html:174
 msgid "Initiator Profiles"

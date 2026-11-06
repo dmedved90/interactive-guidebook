@@ -13,6 +13,7 @@ remaining_hurdles: |-
 duration: '2-3 weeks'
 cost: 'Medium'
 cost_estimate: '1,500-3,500 EUR'
+cost_range: [1500, 3500]
 provider: oss
 hr:
   name: HR-13-Analiza - Prinos

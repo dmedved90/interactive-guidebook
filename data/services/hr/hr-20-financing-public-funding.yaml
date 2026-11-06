@@ -12,6 +12,7 @@ remaining_hurdles: |-
 duration: '8-24 weeks'
 cost: 'Cost of preparing the documentation'
 cost_estimate: '1,000-3,000 EUR'
+cost_range: [1000, 3000]
 provider: oss
 hr:
   name: HR-20-Financiranje - Javna sredstva

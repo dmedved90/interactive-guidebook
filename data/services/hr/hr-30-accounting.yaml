@@ -11,6 +11,8 @@ remaining_hurdles: Lack of professional capacities of CEC and REC members
 duration: 'Ongoing'
 cost: 'Medium'
 cost_estimate: '2,000-5,000 EUR/year'
+cost_range: [2000, 5000]
+cost_period: year
 provider: external
 hr:
   name: HR-30-Računovodstvo

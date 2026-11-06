@@ -11,6 +11,7 @@ result: |-
 duration: '3-6 weeks'
 cost: 'Medium to high'
 cost_estimate: '2,000-8,000 EUR'
+cost_range: [2000, 8000]
 provider: external
 hr:
   name: HR-10-Analiza - Građevinske sinergije i zaštita od požara

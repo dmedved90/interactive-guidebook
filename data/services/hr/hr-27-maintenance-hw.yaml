@@ -13,6 +13,8 @@ remaining_hurdles: |-
 duration: 'Ongoing'
 cost: '0.3% of the investment per year'
 cost_estimate: '200-600 EUR/year'
+cost_range: [200, 600]
+cost_period: year
 provider: oss
 hr:
   name: HR-27-Održavanje - Oprema

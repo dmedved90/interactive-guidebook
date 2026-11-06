@@ -14,6 +14,7 @@ remaining_hurdles: |-
 duration: '2-4 weeks'
 cost: 'Low'
 cost_estimate: '500-1,500 EUR'
+cost_range: [500, 1500]
 provider: external
 hr:
   name: HR-12-Ugovor o otkupu

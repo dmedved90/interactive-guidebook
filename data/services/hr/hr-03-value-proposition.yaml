@@ -12,6 +12,7 @@ remaining_hurdles: |-
 duration: '2-3 weeks'
 cost: 'Low to medium'
 cost_estimate: '500-2,000 EUR'
+cost_range: [500, 2000]
 provider: oss
 hr:
   name: HR-03-Vrijednosna ponuda

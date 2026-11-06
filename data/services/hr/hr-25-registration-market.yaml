@@ -15,6 +15,7 @@ remaining_hurdles: |-
 duration: '8-12 weeks'
 cost: 'Medium'
 cost_estimate: '2,000-4,000 EUR (+ fee 995 EUR)'
+cost_range: [2995, 4995]
 provider: oss
 hr:
   name: HR-25-Registracija - Tržište

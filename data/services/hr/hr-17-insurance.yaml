@@ -9,6 +9,8 @@ result: |-
 duration: '1-2 weeks'
 cost: '0.5% of the investment per year'
 cost_estimate: '300-1,000 EUR/year'
+cost_range: [300, 1000]
+cost_period: year
 provider: external
 hr:
   name: HR-17-Osiguranje

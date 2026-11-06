@@ -14,6 +14,7 @@ remaining_hurdles: |-
 duration: '8-16 weeks'
 cost: 'High'
 cost_estimate: '3,000-10,000 EUR'
+cost_range: [3000, 10000]
 provider: external
 hr:
   name: HR-05-2-Zahtjev za dozvolu - Propisi o prostornom uređenju

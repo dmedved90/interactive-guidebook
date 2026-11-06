@@ -12,6 +12,7 @@ remaining_hurdles: Lack of practical examples on ways of organizing CEC or REC
 duration: '3-6 weeks'
 cost: 'Low'
 cost_estimate: '500-1,000 EUR'
+cost_range: [500, 1000]
 provider: oss
 hr:
   name: HR-02-Procjena zajednice

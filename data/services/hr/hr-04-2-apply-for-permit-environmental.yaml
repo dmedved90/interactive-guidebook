@@ -14,6 +14,7 @@ web_link: https://bioportal.hr/gis/
 duration: '6-12 weeks'
 cost: 'High'
 cost_estimate: '5,000-15,000 EUR'
+cost_range: [5000, 15000]
 provider: external
 hr:
   name: HR-04-2-Zahtjev za dozvolu - Zaštita okoliša

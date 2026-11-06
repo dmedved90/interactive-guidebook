@@ -12,6 +12,7 @@ result: |-
 duration: '2-3 weeks'
 cost: 'Medium'
 cost_estimate: '1,000-3,000 EUR'
+cost_range: [1000, 3000]
 provider: external
 hr:
   name: HR-08-1-Analiza - Električne instalacije

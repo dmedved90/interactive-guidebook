@@ -4,19 +4,18 @@ summary: |-
   To ensure a successful procurement process, start by clearly specifying your requirements.
 description: |-
   Certified PV plant installers often offer a package of services that includes a range of services from obtaining all permits and necessary documentation, to purchasing and installing equipment (Turnkey system).
-stakeholder: Solvis d.o.o.
 input: List of requirements specification; Contracting process
 result: Comprehensive decision and contract with PV equipment supplier.
 duration: '4-8 weeks'
 cost: 'Depends on the system capacity'
 cost_estimate: '40,000-150,000 EUR (for a 30-100 kW system)'
+cost_range: [40000, 150000]
 provider: oss
 hr:
   name: HR-21-Nabava - Oprema
   summary: Za uspješnu nabavu započnite jasnim definiranjem svojih zahtjeva.
   description: |-
     Ovlašteni instalateri fotonaponskih elektrana često nude paket usluga, od pribavljanja svih dozvola i potrebne dokumentacije do nabave i ugradnje opreme (sustav po načelu „ključ u ruke”).
-  stakeholder: Solvis d.o.o.
   input: Specifikacija zahtjeva; postupak ugovaranja
   result: Konačna odluka i ugovor s dobavljačem fotonaponske opreme.
   duration: '4-8 tjedana'

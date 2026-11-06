@@ -14,6 +14,7 @@ remaining_hurdles: |-
 duration: '1-2 weeks (if there are no issues)'
 cost: 'Low'
 cost_estimate: '200-500 EUR'
+cost_range: [200, 500]
 provider: oss
 hr:
   name: HR-07-Dozvola - Građevinski propisi

@@ -13,6 +13,7 @@ remaining_hurdles: |-
 duration: '4-8 weeks'
 cost: 'Low to medium'
 cost_estimate: '500-2,000 EUR'
+cost_range: [500, 2000]
 provider: oss
 hr:
   name: HR-24-Osnivanje pravne osobe

@@ -11,6 +11,7 @@ result: |-
 duration: '1-2 weeks'
 cost: 'Information costs only'
 cost_estimate: '< 500 EUR'
+cost_range: [0, 500]
 provider: oss
 hr:
   name: HR-05-1-Dozvola - Propisi o prostornom uređenju

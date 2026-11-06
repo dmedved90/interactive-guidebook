@@ -12,6 +12,7 @@ remaining_hurdles: Unfavorable orientation of the building, shading or inadequat
 duration: '2-3 weeks'
 cost: 'Medium'
 cost_estimate: '1,000-3,000 EUR'
+cost_range: [1000, 3000]
 provider: oss
 hr:
   name: HR-11-Analiza - Potrošnja

@@ -13,6 +13,7 @@ remaining_hurdles: Insufficient capacity of the DSO in certain periods
 duration: '4-8 weeks'
 cost: 'Medium'
 cost_estimate: '1,500-4,000 EUR'
+cost_range: [1500, 4000]
 provider: external
 hr:
   name: HR-09-Analiza - Elektroenergetska mreža

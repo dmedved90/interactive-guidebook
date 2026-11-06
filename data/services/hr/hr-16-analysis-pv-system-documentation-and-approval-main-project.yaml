@@ -13,6 +13,7 @@ remaining_hurdles: |-
 duration: '6-12 weeks'
 cost: 'High'
 cost_estimate: '5,000-15,000 EUR'
+cost_range: [5000, 15000]
 provider: external
 hr:
   name: HR-16-Analiza - Fotonaponski sustav - Dokumentacija i odobrenje - Glavni projekt

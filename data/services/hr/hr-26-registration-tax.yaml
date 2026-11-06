@@ -10,6 +10,7 @@ result: Tax number - OIB; Entry in the Register of Non-Profit Organizations
 duration: '1-2 weeks'
 cost: 'Minimal'
 cost_estimate: '< 100 EUR'
+cost_range: [0, 100]
 provider: oss
 hr:
   name: HR-26-Registracija - Porez

@@ -14,6 +14,7 @@ remaining_hurdles: |-
 duration: '2-4 weeks'
 cost: 'Medium'
 cost_estimate: '1,500-4,000 EUR'
+cost_range: [1500, 4000]
 provider: external
 hr:
   name: HR-06-Analiza - Statika

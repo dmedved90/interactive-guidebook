@@ -48,6 +48,12 @@ THEMES = {
     'solar': _('Building a solar power plant'),
 }
 
+# Whether a service's numeric cost range is paid once or every year.
+COST_PERIOD_CHOICES = [
+    ('once', _('one-off')),
+    ('year', _('per year')),
+]
+
 # Who delivers a service: the one-stop shop (energy agency) itself or an external provider.
 PROVIDER_CHOICES = [
     ('oss', _('One-stop shop')),
@@ -121,6 +127,10 @@ class Service(models.Model):
     cost            = models.CharField(max_length=200, blank=True)
     cost_estimate   = models.CharField(max_length=200, blank=True)
     provider        = models.CharField(max_length=20, choices=PROVIDER_CHOICES, blank=True)
+    # Indicative cost range in EUR for the guidebook's phase totals (cost_estimate is the text).
+    cost_min        = models.PositiveIntegerField(null=True, blank=True)
+    cost_max        = models.PositiveIntegerField(null=True, blank=True)
+    cost_period     = models.CharField(max_length=10, choices=COST_PERIOD_CHOICES, default='once')
     # "<country>/<file name>" in data/services/ that this service comes from.
     source_key   = models.CharField(max_length=110, unique=True, null=True, blank=True, editable=False)
 

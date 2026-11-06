@@ -112,3 +112,82 @@ class EzsjViewTests(TestCase):
         response = self.client.get(url, {'text': 'hr'})
         self.assertContains(response, '4-8 tjedana')
         self.assertContains(response, 'Srednja cijena')
+
+
+class CostRangeContentTests(ContentFilesMixin, TestCase):
+    def write_service(self, extra):
+        self.write('services/hr/permit.yaml', "name: 'HR: Permit'\nstep: permits\nsummary: S\n" + extra)
+
+    def test_cost_range_and_period_are_synced(self):
+        self.write_service('cost_range: [1500, 4000]\ncost_period: year\n')
+        self.sync()
+        service = Service.objects.get(source_key='hr/permit')
+        self.assertEqual((service.cost_min, service.cost_max, service.cost_period), (1500, 4000, 'year'))
+        self.write_service('')
+        self.sync()
+        service.refresh_from_db()
+        self.assertEqual((service.cost_min, service.cost_max, service.cost_period), (None, None, 'once'))
+
+    def test_invalid_cost_range_is_rejected(self):
+        for bad in ('[4000, 1500]', '[1500]', '[-1, 5]', "['a', 'b']", '1500'):
+            with self.subTest(bad=bad):
+                self.write_service(f'cost_range: {bad}\n')
+                with self.assertRaises(ContentError) as ctx:
+                    load_content(self.dir)
+                self.assertIn('"cost_range" must be', '\n'.join(ctx.exception.errors))
+
+    def test_invalid_cost_period_is_rejected(self):
+        self.write_service('cost_range: [1, 2]\ncost_period: monthly\n')
+        with self.assertRaises(ContentError) as ctx:
+            load_content(self.dir)
+        self.assertIn('"cost_period" must be one of', '\n'.join(ctx.exception.errors))
+
+
+class CostTotalsViewTests(TestCase):
+    @classmethod
+    def setUpTestData(cls):
+        get_user_model().objects.create_user('manager@example.com', password='pw')
+        croatia = Country.objects.create(code='HR', name='Croatia', language='hr')
+        austria = Country.objects.create(code='AT', name='Austria', language='de')
+        planning = Phase.objects.get(slug='planning')
+        operation = Phase.objects.get(slug='operation')
+        grid = GeneralStep.objects.create(title='Grid', phase=planning, sort_order=1, themes='solar')
+        social = GeneralStep.objects.create(title='Community', phase=planning, sort_order=2)
+        upkeep = GeneralStep.objects.create(title='Maintenance', phase=operation, sort_order=3, themes='solar')
+        def service(slug, step, country=croatia, **kw):
+            Service.objects.create(name=slug, slug=slug, summary='S', country=country, general_step=step, **kw)
+        service('grid', grid, cost_min=1500, cost_max=4000)
+        service('social', social, cost_min=0, cost_max=500)
+        service('vague', social)  # no numeric estimate
+        service('upkeep', upkeep, cost_min=200, cost_max=600, cost_period='year')
+        service('at-grid', grid, country=austria, cost_min=9000, cost_max=9000)
+
+    def get(self, **params):
+        return self.client.get(reverse('catalog:guidebook'), params)
+
+    def phase_costs(self, response):
+        return {pd['phase'].slug: pd['costs'] for pd in response.context['phase_data']}
+
+    def test_totals_per_phase_and_overall_for_a_country(self):
+        response = self.get(country='HR')
+        costs = self.phase_costs(response)
+        self.assertEqual(costs['planning'], {'once': [1500, 4500], 'year': None, 'missing': 1})
+        self.assertEqual(costs['operation'], {'once': None, 'year': [200, 600], 'missing': 0})
+        self.assertIsNone(costs['realisation'])
+        self.assertEqual(response.context['total_costs'], {'once': [1500, 4500], 'year': [200, 600], 'missing': 1})
+        self.assertContains(response, '4,500 EUR')
+        self.assertContains(response, '1 service without a numeric estimate')
+
+    def test_theme_filter_limits_the_totals(self):
+        response = self.get(country='HR', theme='solar')
+        self.assertEqual(response.context['total_costs'], {'once': [1500, 4000], 'year': [200, 600], 'missing': 0})
+
+    def test_no_totals_without_a_country(self):
+        response = self.get(country='all')
+        self.assertIsNone(response.context['total_costs'])
+        self.assertTrue(all(pd['costs'] is None for pd in response.context['phase_data']))
+        self.assertNotContains(response, 'cost-totals')
+
+    def test_totals_are_localized(self):
+        response = self.client.get('/hr/catalog/guidebook/', {'country': 'HR'})
+        self.assertContains(response, '4.500 EUR')

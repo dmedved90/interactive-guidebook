@@ -169,3 +169,14 @@
 
 /* Thematic filter */
 .theme-note { margin: 0 0 1.5rem; padding: 0.6rem 1rem; background: #fffbe6; border-left: 4px solid #f2c200; border-radius: 4px; }
+
+/* Indicative cost totals (per phase and overall) */
+.cost-totals {
+  display: flex; flex-wrap: wrap; gap: 0.35rem 1rem; align-items: baseline;
+  padding: 0.6rem 1.5rem; background: #fafafa; border: 1px solid #e8e8e8; border-top: none;
+  font-size: 0.9rem; color: #444;
+}
+.cost-totals-overall { border: 1px solid #e8e8e8; border-radius: 8px; padding: 0.8rem 1rem; background: #fff; font-size: 1rem; }
+.cost-totals-label { font-weight: 600; }
+.cost-totals-missing { color: #888; font-size: 0.85em; }
+.cost-totals-note { color: #777; font-size: 0.85rem; margin: 0.4rem 0 1.5rem; }

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-05 17:18+0000\n"
+"POT-Creation-Date: 2026-11-06 04:59+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Draft translation - pending review by native speakers\n"
 "Language-Team: DISCOVER partners (it)\n"
@@ -204,21 +204,36 @@ msgstr "paesi"
 msgid "Building a solar power plant"
 msgstr "Costruire un impianto fotovoltaico"
 
-#: catalog/models.py:53
+#: catalog/models.py:53 catalog/templates/catalog/_cost_totals.html:5
+msgid "one-off"
+msgstr "una tantum"
+
+#: catalog/models.py:54 catalog/templates/catalog/_cost_totals.html:8
+msgid "per year"
+msgstr "all'anno"
+
+#: catalog/models.py:59
 msgid "One-stop shop"
 msgstr "Sportello unico"
 
-#: catalog/models.py:54
+#: catalog/models.py:60
 msgid "External provider"
 msgstr "Fornitore esterno"
 
-#: catalog/models.py:157 catalog/models.py:178
+#: catalog/models.py:167 catalog/models.py:188
 msgid "translation"
 msgstr "traduzione"
 
-#: catalog/models.py:158 catalog/models.py:179
+#: catalog/models.py:168 catalog/models.py:189
 msgid "translations"
 msgstr "traduzioni"
+
+#: catalog/templates/catalog/_cost_totals.html:11
+#, python-format
+msgid "%(counter)s service without a numeric estimate"
+msgid_plural "%(counter)s services without a numeric estimate"
+msgstr[0] "%(counter)s servizio senza stima numerica"
+msgstr[1] "%(counter)s servizi senza stima numerica"
 
 #: catalog/templates/catalog/_text_language_switch.html:4
 msgid "Language of the service text"
@@ -282,7 +297,19 @@ msgstr "Imposta %(country)s come predefinito"
 msgid "<strong>%(theme)s</strong>: showing %(shown)s of %(total)s steps."
 msgstr "<strong>%(theme)s</strong>: mostrati %(shown)s di %(total)s passi."
 
-#: catalog/templates/catalog/guidebook.html:72 templates/home.html:98
+#: catalog/templates/catalog/guidebook.html:67
+msgid "Indicative cost of the shown steps"
+msgstr "Costo indicativo dei passi mostrati"
+
+#: catalog/templates/catalog/guidebook.html:69
+#, python-format
+msgid ""
+"Sum of the cost estimates of the %(country)s services below. A rough guide "
+"for planning, not a quote: actual costs depend on the size and location of "
+"the project."
+msgstr "Somma delle stime dei costi dei servizi per %(country)s riportati di seguito. Un'indicazione di massima per la pianificazione, non un preventivo: i costi effettivi dipendono dalla dimensione e dalla posizione del progetto."
+
+#: catalog/templates/catalog/guidebook.html:81 templates/home.html:98
 #: templates/home.html:121 templates/home.html:143
 #, python-format
 msgid "%(counter)s step"
@@ -290,7 +317,11 @@ msgid_plural "%(counter)s steps"
 msgstr[0] "%(counter)s passo"
 msgstr[1] "%(counter)s passi"
 
-#: catalog/templates/catalog/guidebook.html:87
+#: catalog/templates/catalog/guidebook.html:84
+msgid "Indicative cost of this phase"
+msgstr "Costo indicativo di questa fase"
+
+#: catalog/templates/catalog/guidebook.html:100
 #: catalog/templates/catalog/service_list.html:63
 #, python-format
 msgid "%(counter)s service"
@@ -298,27 +329,27 @@ msgid_plural "%(counter)s services"
 msgstr[0] "%(counter)s servizio"
 msgstr[1] "%(counter)s servizi"
 
-#: catalog/templates/catalog/guidebook.html:100
+#: catalog/templates/catalog/guidebook.html:113
 #: catalog/templates/catalog/service_detail.html:38
 msgid "Duration"
 msgstr "Durata"
 
-#: catalog/templates/catalog/guidebook.html:101
+#: catalog/templates/catalog/guidebook.html:114
 #: catalog/templates/catalog/service_detail.html:46
 msgid "Cost estimate"
 msgstr "Stima dei costi"
 
-#: catalog/templates/catalog/guidebook.html:106
+#: catalog/templates/catalog/guidebook.html:119
 msgid "Details"
 msgstr "Dettagli"
 
-#: catalog/templates/catalog/guidebook.html:108
+#: catalog/templates/catalog/guidebook.html:121
 #: catalog/templates/catalog/service_detail.html:26
 #: initiators/templates/initiators/service_link.html:40
 msgid "Official link"
 msgstr "Link ufficiale"
 
-#: catalog/templates/catalog/guidebook.html:120
+#: catalog/templates/catalog/guidebook.html:133
 msgid "No country-specific services for this step yet."
 msgstr "Nessun servizio specifico per paese per questo passo."
 
@@ -424,7 +455,7 @@ msgstr "Nessun servizio trovato."
 msgid "Clear filters"
 msgstr "Cancella filtri"
 
-#: catalog/views.py:169
+#: catalog/views.py:204
 #, python-format
 msgid "%(country)s is now your default country."
 msgstr "%(country)s è ora il suo paese predefinito."

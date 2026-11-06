@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-05 17:18+0000\n"
+"POT-Creation-Date: 2026-11-06 04:59+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Draft translation - pending review by native speakers\n"
 "Language-Team: DISCOVER partners (bg)\n"
@@ -203,21 +203,36 @@ msgstr "държави"
 msgid "Building a solar power plant"
 msgstr "Изграждане на соларна централа"
 
-#: catalog/models.py:53
+#: catalog/models.py:53 catalog/templates/catalog/_cost_totals.html:5
+msgid "one-off"
+msgstr "еднократно"
+
+#: catalog/models.py:54 catalog/templates/catalog/_cost_totals.html:8
+msgid "per year"
+msgstr "годишно"
+
+#: catalog/models.py:59
 msgid "One-stop shop"
 msgstr "Обслужване на едно гише"
 
-#: catalog/models.py:54
+#: catalog/models.py:60
 msgid "External provider"
 msgstr "Външен доставчик"
 
-#: catalog/models.py:157 catalog/models.py:178
+#: catalog/models.py:167 catalog/models.py:188
 msgid "translation"
 msgstr "превод"
 
-#: catalog/models.py:158 catalog/models.py:179
+#: catalog/models.py:168 catalog/models.py:189
 msgid "translations"
 msgstr "преводи"
+
+#: catalog/templates/catalog/_cost_totals.html:11
+#, python-format
+msgid "%(counter)s service without a numeric estimate"
+msgid_plural "%(counter)s services without a numeric estimate"
+msgstr[0] "%(counter)s услуга без числова оценка"
+msgstr[1] "%(counter)s услуги без числова оценка"
 
 #: catalog/templates/catalog/_text_language_switch.html:4
 msgid "Language of the service text"
@@ -282,7 +297,19 @@ msgstr "Задай %(country)s по подразбиране"
 msgid "<strong>%(theme)s</strong>: showing %(shown)s of %(total)s steps."
 msgstr "<strong>%(theme)s</strong>: показани са %(shown)s от %(total)s стъпки."
 
-#: catalog/templates/catalog/guidebook.html:72 templates/home.html:98
+#: catalog/templates/catalog/guidebook.html:67
+msgid "Indicative cost of the shown steps"
+msgstr "Ориентировъчна цена на показаните стъпки"
+
+#: catalog/templates/catalog/guidebook.html:69
+#, python-format
+msgid ""
+"Sum of the cost estimates of the %(country)s services below. A rough guide "
+"for planning, not a quote: actual costs depend on the size and location of "
+"the project."
+msgstr "Сбор от оценките на разходите за услугите за %(country)s по-долу. Ориентир за планиране, а не оферта: действителните разходи зависят от размера и местоположението на проекта."
+
+#: catalog/templates/catalog/guidebook.html:81 templates/home.html:98
 #: templates/home.html:121 templates/home.html:143
 #, python-format
 msgid "%(counter)s step"
@@ -290,7 +317,11 @@ msgid_plural "%(counter)s steps"
 msgstr[0] "%(counter)s стъпка"
 msgstr[1] "%(counter)s стъпки"
 
-#: catalog/templates/catalog/guidebook.html:87
+#: catalog/templates/catalog/guidebook.html:84
+msgid "Indicative cost of this phase"
+msgstr "Ориентировъчна цена на тази фаза"
+
+#: catalog/templates/catalog/guidebook.html:100
 #: catalog/templates/catalog/service_list.html:63
 #, python-format
 msgid "%(counter)s service"
@@ -298,27 +329,27 @@ msgid_plural "%(counter)s services"
 msgstr[0] "%(counter)s услуга"
 msgstr[1] "%(counter)s услуги"
 
-#: catalog/templates/catalog/guidebook.html:100
+#: catalog/templates/catalog/guidebook.html:113
 #: catalog/templates/catalog/service_detail.html:38
 msgid "Duration"
 msgstr "Продължителност"
 
-#: catalog/templates/catalog/guidebook.html:101
+#: catalog/templates/catalog/guidebook.html:114
 #: catalog/templates/catalog/service_detail.html:46
 msgid "Cost estimate"
 msgstr "Оценка на разходите"
 
-#: catalog/templates/catalog/guidebook.html:106
+#: catalog/templates/catalog/guidebook.html:119
 msgid "Details"
 msgstr "Подробности"
 
-#: catalog/templates/catalog/guidebook.html:108
+#: catalog/templates/catalog/guidebook.html:121
 #: catalog/templates/catalog/service_detail.html:26
 #: initiators/templates/initiators/service_link.html:40
 msgid "Official link"
 msgstr "Официална връзка"
 
-#: catalog/templates/catalog/guidebook.html:120
+#: catalog/templates/catalog/guidebook.html:133
 msgid "No country-specific services for this step yet."
 msgstr "Все още няма услуги за тази стъпка, специфични за държавата."
 
@@ -424,7 +455,7 @@ msgstr "Няма намерени услуги."
 msgid "Clear filters"
 msgstr "Изчисти филтрите"
 
-#: catalog/views.py:169
+#: catalog/views.py:204
 #, python-format
 msgid "%(country)s is now your default country."
 msgstr "%(country)s вече е вашата държава по подразбиране."

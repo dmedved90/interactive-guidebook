@@ -17,6 +17,32 @@ from .models import THEMES, Country, Phase, Service
 ALL_COUNTRIES = 'all'
 
 
+def cost_totals(services):
+    """Sum the services' indicative cost ranges (EUR), one-off and yearly separately.
+
+    Services without a numeric range are counted in ``missing``. Returns None when there
+    is nothing to sum.
+    """
+    totals = {'once': [0, 0], 'year': [0, 0]}
+    has = {'once': False, 'year': False}
+    missing = 0
+    for service in services:
+        if service.cost_min is None or service.cost_max is None:
+            missing += 1
+            continue
+        period = 'year' if service.cost_period == 'year' else 'once'
+        totals[period][0] += service.cost_min
+        totals[period][1] += service.cost_max
+        has[period] = True
+    if not (has['once'] or has['year']):
+        return None
+    return {
+        'once': totals['once'] if has['once'] else None,
+        'year': totals['year'] if has['year'] else None,
+        'missing': missing,
+    }
+
+
 class CountrySelectionMixin:
     """Resolve the country the visitor wants to see services for.
 
@@ -141,9 +167,18 @@ class GuidebookView(CountrySelectionMixin, TemplateView):
             shown_steps += len(steps)
             has_draft = has_draft or any(entry['step'].text.is_draft for entry in steps)
             if steps or not theme:
-                phase_data.append({'phase': phase, 'steps': steps})
+                phase_services = [s for entry in steps for s in entry['services']]
+                phase_data.append({
+                    'phase': phase, 'steps': steps,
+                    # Summing only makes sense within one country.
+                    'costs': cost_totals(phase_services) if country else None,
+                })
 
         ctx['phase_data'] = phase_data
+        ctx['total_costs'] = (
+            cost_totals(s for pd in phase_data for entry in pd['steps'] for s in entry['services'])
+            if country else None
+        )
         ctx['themes'] = THEMES.items()
         ctx['active_theme'] = theme
         ctx['active_theme_label'] = THEMES.get(theme, '')

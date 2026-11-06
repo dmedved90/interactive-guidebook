@@ -63,6 +63,15 @@
   {% endblocktranslate %}</p>
   {% endif %}
 
+  {% if total_costs %}
+  {% translate "Indicative cost of the shown steps" as total_title %}
+  {% include "catalog/_cost_totals.html" with costs=total_costs title=total_title total=True %}
+  <p class="cost-totals-note">{% blocktranslate trimmed with country=country.name %}
+    Sum of the cost estimates of the {{ country }} services below. A rough guide for planning, not a quote:
+    actual costs depend on the size and location of the project.
+  {% endblocktranslate %}</p>
+  {% endif %}
+
   {% for pd in phase_data %}
   {% with phase=pd.phase steps=pd.steps %}
   <section class="gb-phase">
@@ -71,6 +80,10 @@
       <div class="gb-phase-title">{{ phase.label }}</div>
       <div class="gb-phase-count">{% blocktranslate count counter=steps|length %}{{ counter }} step{% plural %}{{ counter }} steps{% endblocktranslate %}</div>
     </div>
+    {% if pd.costs %}
+    {% translate "Indicative cost of this phase" as phase_title %}
+    {% include "catalog/_cost_totals.html" with costs=pd.costs title=phase_title %}
+    {% endif %}
     <div class="gb-steps">
       {% for item in steps %}
       {% with step=item.step services=item.services %}

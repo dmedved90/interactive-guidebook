@@ -2,7 +2,7 @@
 
 > **EZSJ fork** of [LIFE-DISCOVER/interactive-guidebook](https://github.com/LIFE-DISCOVER/interactive-guidebook),
 > running at <https://guidebook.ezsj.eu>. Additions: service duration, cost, cost estimate and
-> provider (one-stop shop or external), and a thematic filter of the guidebook steps
+> provider (one-stop shop or external), indicative cost totals per phase, and a thematic filter of the guidebook steps
 > (building a solar power plant). Deployment of this instance: `compose.ezsj.yaml`, backup:
 > `deploy/backup-ezsj.sh`. Upstream changes: `git fetch upstream && git merge upstream/main`.
 

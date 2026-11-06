@@ -1,0 +1,13 @@
+{% load i18n %}{# Indicative cost totals; expects "costs" from catalog.views.cost_totals and an optional "title". #}
+<div class="cost-totals{% if total %} cost-totals-overall{% endif %}">
+  <span class="cost-totals-label">{{ title }}:</span>
+  {% if costs.once %}
+  <span class="cost-totals-value"><strong>{{ costs.once.0|floatformat:"0g" }}–{{ costs.once.1|floatformat:"0g" }} EUR</strong> {% translate "one-off" %}</span>
+  {% endif %}
+  {% if costs.year %}
+  <span class="cost-totals-value"><strong>{{ costs.year.0|floatformat:"0g" }}–{{ costs.year.1|floatformat:"0g" }} EUR</strong> {% translate "per year" %}</span>
+  {% endif %}
+  {% if costs.missing %}
+  <span class="cost-totals-missing">{% blocktranslate count counter=costs.missing %}{{ counter }} service without a numeric estimate{% plural %}{{ counter }} services without a numeric estimate{% endblocktranslate %}</span>
+  {% endif %}
+</div>

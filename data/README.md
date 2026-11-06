@@ -51,6 +51,8 @@ Moving a file to another phase folder moves the step (and its services) to that 
 | `cost` | no | Cost category, e.g. `Medium` or `0.5% of the investment per year` (max. 200) |
 | `cost_estimate` | no | Indicative cost, e.g. `1,500-4,000 EUR` (max. 200) |
 | `provider` | no | Who delivers it: `oss` (the one-stop shop) or `external` (an external provider) |
+| `cost_range` | no | Indicative cost in whole euros as `[min, max]`, e.g. `[1500, 4000]`; summed per phase in the guidebook when a country is selected |
+| `cost_period` | no | `once` (default) or `year` for recurring costs; yearly costs are summed separately |
 | `extra_phases` | no | Further phases the service applies to, e.g. `[operation]` (its step's phase is always included) |
 | `active` | no | `false` hides the service without deleting it |
 
@@ -75,7 +77,7 @@ de:
 - **Guidebook steps** can have a block for each of `de`, `fr`, `it`, `hr` and `bg`.
 - Translatable fields: for services `name`, `summary`, `description`, `stakeholder`, `input`,
   `result`, `remaining_hurdles`, `duration`, `cost`, `cost_estimate`; for steps `title`, `description`, `objective`,
-  `description_long`. Other fields (links, step, order, topic, themes, provider) are never translated.
+  `description_long`. Other fields (links, step, order, topic, themes, provider, cost_range, cost_period) are never translated.
 - Every field in a block is optional; the site shows the English text where a translation is
   missing. Length limits are the same as for English.
 - `reviewed: false` marks a draft; the site then shows a "draft translation" note. A native

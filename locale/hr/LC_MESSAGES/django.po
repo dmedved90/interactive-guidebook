@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-05 17:18+0000\n"
+"POT-Creation-Date: 2026-11-06 04:59+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Draft translation - pending review by native speakers\n"
 "Language-Team: DISCOVER partners (hr)\n"
@@ -201,21 +201,37 @@ msgstr "države"
 msgid "Building a solar power plant"
 msgstr "Izgradnja solarne elektrane"
 
-#: catalog/models.py:53
+#: catalog/models.py:53 catalog/templates/catalog/_cost_totals.html:5
+msgid "one-off"
+msgstr "jednokratno"
+
+#: catalog/models.py:54 catalog/templates/catalog/_cost_totals.html:8
+msgid "per year"
+msgstr "godišnje"
+
+#: catalog/models.py:59
 msgid "One-stop shop"
 msgstr "Centar za potporu (OSS)"
 
-#: catalog/models.py:54
+#: catalog/models.py:60
 msgid "External provider"
 msgstr "Vanjski pružatelj"
 
-#: catalog/models.py:157 catalog/models.py:178
+#: catalog/models.py:167 catalog/models.py:188
 msgid "translation"
 msgstr "prijevod"
 
-#: catalog/models.py:158 catalog/models.py:179
+#: catalog/models.py:168 catalog/models.py:189
 msgid "translations"
 msgstr "prijevodi"
+
+#: catalog/templates/catalog/_cost_totals.html:11
+#, python-format
+msgid "%(counter)s service without a numeric estimate"
+msgid_plural "%(counter)s services without a numeric estimate"
+msgstr[0] "%(counter)s usluga bez brojčane procjene"
+msgstr[1] "%(counter)s usluge bez brojčane procjene"
+msgstr[2] "%(counter)s usluga bez brojčane procjene"
 
 #: catalog/templates/catalog/_text_language_switch.html:4
 msgid "Language of the service text"
@@ -277,7 +293,19 @@ msgstr "Postavi %(country)s kao zadanu"
 msgid "<strong>%(theme)s</strong>: showing %(shown)s of %(total)s steps."
 msgstr "<strong>%(theme)s</strong>: prikazano %(shown)s od %(total)s koraka."
 
-#: catalog/templates/catalog/guidebook.html:72 templates/home.html:98
+#: catalog/templates/catalog/guidebook.html:67
+msgid "Indicative cost of the shown steps"
+msgstr "Okvirni trošak prikazanih koraka"
+
+#: catalog/templates/catalog/guidebook.html:69
+#, python-format
+msgid ""
+"Sum of the cost estimates of the %(country)s services below. A rough guide "
+"for planning, not a quote: actual costs depend on the size and location of "
+"the project."
+msgstr "Zbroj procjena troškova usluga za %(country)s prikazanih u nastavku. Okvirna smjernica za planiranje, a ne ponuda: stvarni troškovi ovise o veličini i lokaciji projekta."
+
+#: catalog/templates/catalog/guidebook.html:81 templates/home.html:98
 #: templates/home.html:121 templates/home.html:143
 #, python-format
 msgid "%(counter)s step"
@@ -286,7 +314,11 @@ msgstr[0] "%(counter)s korak"
 msgstr[1] "%(counter)s koraka"
 msgstr[2] "%(counter)s koraka"
 
-#: catalog/templates/catalog/guidebook.html:87
+#: catalog/templates/catalog/guidebook.html:84
+msgid "Indicative cost of this phase"
+msgstr "Okvirni trošak faze"
+
+#: catalog/templates/catalog/guidebook.html:100
 #: catalog/templates/catalog/service_list.html:63
 #, python-format
 msgid "%(counter)s service"
@@ -295,27 +327,27 @@ msgstr[0] "%(counter)s usluga"
 msgstr[1] "%(counter)s usluge"
 msgstr[2] "%(counter)s usluga"
 
-#: catalog/templates/catalog/guidebook.html:100
+#: catalog/templates/catalog/guidebook.html:113
 #: catalog/templates/catalog/service_detail.html:38
 msgid "Duration"
 msgstr "Trajanje"
 
-#: catalog/templates/catalog/guidebook.html:101
+#: catalog/templates/catalog/guidebook.html:114
 #: catalog/templates/catalog/service_detail.html:46
 msgid "Cost estimate"
 msgstr "Procjena troška"
 
-#: catalog/templates/catalog/guidebook.html:106
+#: catalog/templates/catalog/guidebook.html:119
 msgid "Details"
 msgstr "Detalji"
 
-#: catalog/templates/catalog/guidebook.html:108
+#: catalog/templates/catalog/guidebook.html:121
 #: catalog/templates/catalog/service_detail.html:26
 #: initiators/templates/initiators/service_link.html:40
 msgid "Official link"
 msgstr "Službena poveznica"
 
-#: catalog/templates/catalog/guidebook.html:120
+#: catalog/templates/catalog/guidebook.html:133
 msgid "No country-specific services for this step yet."
 msgstr "Za ovaj korak još nema usluga specifičnih za državu."
 
@@ -424,7 +456,7 @@ msgstr "Nema pronađenih usluga."
 msgid "Clear filters"
 msgstr "Očisti filtre"
 
-#: catalog/views.py:169
+#: catalog/views.py:204
 #, python-format
 msgid "%(country)s is now your default country."
 msgstr "%(country)s je sada vaša zadana država."

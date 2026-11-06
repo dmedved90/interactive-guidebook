@@ -25,7 +25,7 @@ from django.db import transaction
 from django.utils.text import slugify
 
 from .models import (
-    PROVIDER_CHOICES, THEMES, Country, GeneralStep, Phase, Service, ServicePhase, ServiceTranslation,
+    COST_PERIOD_CHOICES, PROVIDER_CHOICES, THEMES, Country, GeneralStep, Phase, Service, ServicePhase, ServiceTranslation,
     StepTranslation,
 )
 
@@ -60,6 +60,8 @@ SERVICE_FIELDS = {
     'cost': ('cost', False, 200),
     'cost_estimate': ('cost_estimate', False, 200),
     'provider': ('provider', False, None),
+    'cost_range': (None, False, None),
+    'cost_period': ('cost_period', False, None),
     'extra_phases': (None, False, None),
     'active': ('is_active', False, None),
 }
@@ -84,7 +86,7 @@ SERVICE_TRANSLATION_FIELDS = {
     'reviewed': ('reviewed', False, None),
 }
 BOOLEAN_FIELDS = {'active', 'reviewed'}
-LIST_FIELDS = {'extra_phases', 'themes'}   # checked by the caller
+LIST_FIELDS = {'extra_phases', 'themes', 'cost_range'}   # checked by the caller
 
 
 def translation_languages():
@@ -279,6 +281,17 @@ def load_content(base=CONTENT_DIR):
         step = str(data.get('step') or '')
         if step and step not in content.steps:
             errors.append(f'{rel}: step "{step}" does not exist in data/steps/')
+        cost_range = data.get('cost_range')
+        if cost_range is not None:
+            if (not isinstance(cost_range, list) or len(cost_range) != 2
+                    or any(not isinstance(n, int) or isinstance(n, bool) or n < 0 for n in cost_range)
+                    or cost_range[0] > cost_range[1]):
+                errors.append(f'{rel}: "cost_range" must be [min, max] in whole euros, e.g. [1500, 4000]')
+            else:
+                values['cost_min'], values['cost_max'] = cost_range
+        period = values.get('cost_period', '')
+        if period and period not in dict(COST_PERIOD_CHOICES):
+            errors.append(f'{rel}: "cost_period" must be one of: {", ".join(dict(COST_PERIOD_CHOICES))}')
         provider = values.get('provider', '')
         if provider and provider not in dict(PROVIDER_CHOICES):
             errors.append(f'{rel}: "provider" must be one of: {", ".join(dict(PROVIDER_CHOICES))}')
@@ -422,7 +435,7 @@ def _sync(content, report):
         values = {
             'description': '', 'web_link': '', 'stakeholder': '', 'service_input': '',
             'result': '', 'remaining_hurdles': '', 'duration': '', 'cost': '', 'cost_estimate': '',
-            'provider': '', 'is_active': True,
+            'provider': '', 'cost_min': None, 'cost_max': None, 'cost_period': 'once', 'is_active': True,
             **data.values,
             'country': countries[data.country],
             'general_step': step,
